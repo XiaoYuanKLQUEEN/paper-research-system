@@ -1,0 +1,17 @@
+# 临时文件
+arxiv_filtered.json
+conf_test.json
+conf_filtered.json
+
+# 凭据
+.git_cred_tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# 克隆的仓库
+evil-read-arxiv/
+
+# 系统文件
+desktop.ini

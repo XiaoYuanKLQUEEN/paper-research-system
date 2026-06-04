@@ -1,0 +1,65 @@
+# conf-papers 配置 — LLM评估人类素养/人格方向
+# 搜索 NLP/ML 顶会中与评估、偏见、人格等相关的论文
+
+keywords:
+  - "evaluation"
+  - "assessment"
+  - "scoring"
+  - "bias"
+  - "fairness"
+  - "calibration"
+  - "personality"
+  - "interview"
+  - "annotation"
+  - "human evaluation"
+  - "LLM judge"
+  - "LLM evaluator"
+  - "LLM-as-a-judge"
+  - "rater"
+  - "inter-rater"
+  - "inter-annotator"
+  - "reliability"
+  - "validity"
+  - "psychometric"
+  - "competency"
+  - "skill assessment"
+  - "behavioral"
+  - "multi-agent"
+  - "agent evaluation"
+  - "debiasing"
+  - "debiasing"
+  - "alignment"
+  - "feedback"
+  - "rubric"
+  - "grading"
+  - "trait"
+  - "Big Five"
+  - "MBTI"
+
+excluded_keywords:
+  - "3D"
+  - "workshop"
+  - "survey"
+  - "tutorial"
+  - "medical image"
+  - "clinical trial"
+  - "drug"
+  - "genomics"
+  - "protein"
+  - "radiology"
+  - "histopathology"
+
+default_year: 2025
+
+default_conferences:
+  - "ACL"
+  - "EMNLP"
+  - "NAACL"
+  - "NeurIPS"
+  - "ICML"
+  - "ICLR"
+  - "AAAI"
+  - "CHI"
+  - "FAccT"
+
+top_n: 15
