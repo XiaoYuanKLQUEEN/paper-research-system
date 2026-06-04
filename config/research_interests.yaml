@@ -1,0 +1,198 @@
+# 研究兴趣配置 — LLM-based Human Assessment & Personality Evaluation
+# 方向：用 LLM 作为评估工具给人类的职业素养/人格打分
+language: "zh"
+
+vault_path: "D:/Obsidian"
+
+research_domains:
+  "LLM评估与评分":
+    keywords:
+      - "LLM assessment"
+      - "LLM evaluation"
+      - "LLM scoring"
+      - "automated scoring"
+      - "automated grading"
+      - "AI scoring"
+      - "LLM as evaluator"
+      - "LLM-as-judge"
+      - "GPT evaluation"
+      - "AI rater"
+      - "automated essay scoring"
+      - "rubric-based scoring"
+      - "rating scale"
+      - "competency assessment"
+      - "competency scoring"
+      - "competency evaluation"
+      - "professional competency"
+      - "skill assessment"
+      - "proficiency scoring"
+      - "performance evaluation"
+      - "behavioral assessment"
+      - "behavioral scoring"
+    arxiv_categories:
+      - "cs.CL"
+      - "cs.AI"
+      - "cs.CY"
+    priority: 10
+
+  "AI面试官":
+    keywords:
+      - "AI interviewer"
+      - "AI interview"
+      - "automated interview"
+      - "virtual interview"
+      - "mock interview"
+      - "interview assessment"
+      - "interview scoring"
+      - "interview evaluation"
+      - "hiring assessment"
+      - "recruitment AI"
+      - "job interview"
+      - "structured interview"
+      - "video interview"
+      - "asynchronous interview"
+    arxiv_categories:
+      - "cs.CL"
+      - "cs.AI"
+      - "cs.HC"
+    priority: 9
+
+  "NLP人格推断":
+    keywords:
+      - "personality detection"
+      - "personality inference"
+      - "personality prediction"
+      - "personality assessment"
+      - "personality trait"
+      - "Big Five"
+      - "MBTI"
+      - "psycholinguistic"
+      - "language personality"
+      - "text-based personality"
+      - "computational personality"
+      - "personality computing"
+      - "trait inference"
+      - "automatic personality"
+    arxiv_categories:
+      - "cs.CL"
+      - "cs.AI"
+    priority: 9
+
+  "多模态面试评估":
+    keywords:
+      - "multimodal interview"
+      - "video assessment"
+      - "audio interview"
+      - "facial expression interview"
+      - "speech analysis interview"
+      - "nonverbal behavior"
+      - "paralinguistic"
+      - "multimodal interaction"
+      - "video-based assessment"
+      - "multimodal LLM"
+      - "vision language interview"
+    arxiv_categories:
+      - "cs.CV"
+      - "cs.MM"
+      - "cs.CL"
+      - "cs.AI"
+    priority: 8
+
+  "多智能体评估与去偏":
+    keywords:
+      - "multi-agent assessment"
+      - "multi-agent evaluation"
+      - "agent debate"
+      - "multi-agent debate"
+      - "multi-agent scoring"
+      - "ensemble evaluation"
+      - "LLM ensemble"
+      - "model ensemble assessment"
+      - "debiasing assessment"
+      - "bias mitigation"
+      - "bias correction"
+      - "bias diagnosis"
+      - "calibration scoring"
+      - "rater bias"
+      - "evaluator bias"
+      - "inter-rater reliability"
+      - "rater agreement"
+      - "scoring fairness"
+      - "assessment fairness"
+    arxiv_categories:
+      - "cs.AI"
+      - "cs.CL"
+      - "cs.MA"
+    priority: 10
+
+  "LLM偏见与公平性":
+    keywords:
+      - "LLM bias"
+      - "LLM fairness"
+      - "position bias"
+      - "order effect"
+      - "length bias"
+      - "verbosity bias"
+      - "self-enhancement bias"
+      - "egocentric bias"
+      - "cognitive bias LLM"
+      - "benchmark contamination"
+      - "evaluation bias"
+      - "scoring bias"
+      - "calibration LLM"
+      - "LLM alignment"
+    arxiv_categories:
+      - "cs.CL"
+      - "cs.AI"
+      - "cs.CY"
+    priority: 9
+
+  "Agent辅助测评":
+    keywords:
+      - "agent assessment"
+      - "agent-based evaluation"
+      - "agent-assisted scoring"
+      - "agent pipeline"
+      - "workflow agent assessment"
+      - "agentic evaluation"
+      - "agentic workflow"
+      - "tool-augmented LLM"
+      - "agent scoring"
+      - "agent feedback"
+      - "agent rubric"
+    arxiv_categories:
+      - "cs.AI"
+      - "cs.MA"
+      - "cs.CL"
+    priority: 8
+
+  "广义LLM评估方法论":
+    keywords:
+      - "LLM evaluation method"
+      - "evaluation framework"
+      - "benchmarking LLM"
+      - "LLM benchmark"
+      - "human evaluation"
+      - "human agreement"
+      - "human baseline"
+      - "gold standard assessment"
+      - "evaluation metric"
+      - "evaluation protocol"
+      - "psychometric assessment"
+      - "validity LLM"
+      - "reliability LLM"
+    arxiv_categories:
+      - "cs.CL"
+      - "cs.AI"
+    priority: 7
+
+excluded_keywords:
+  - "3D"
+  - "workshop"
+  - "survey"
+  - "综述"
+  - "medical image"
+  - "clinical trial"
+  - "drug"
+  - "genomics"
+  - "protein"
