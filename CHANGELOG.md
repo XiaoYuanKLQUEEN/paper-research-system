@@ -9,7 +9,7 @@
 
 ## [2026-06-05] GitHub 开发流程文档
 
-### `待推送` — 文档(流程): 新增 GitHub 开发流程与 Cursor Agent 规则
+### `990c890` — 文档(流程): 新增 GitHub 开发流程与 Cursor Agent 规则
 
 - `docs/GITHUB_WORKFLOW.md`: 完整开发循环（验证→确认最终版→精确 commit→代理 push）
 - `.cursor/rules/github-workflow.mdc`: Agent 自动遵循的 alwaysApply 规则
