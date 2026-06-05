@@ -234,3 +234,11 @@ A: 编辑 `arxiv_daily.py` 中的 `WEIGHTS_NORMAL`。
 - Python 3.8+
 - 依赖：`PyYAML`, `requests`, `PyMuPDF`
 - （可选）Semantic Scholar API Key — https://www.semanticscholar.org/product/api#api-key
+
+---
+
+## 变更记录与提交规范
+
+- **变更日志**：[`CHANGELOG.md`](CHANGELOG.md) — 每次 push 做了什么（历史模糊 commit 以这里为准）
+- **提交规范**：[`docs/COMMIT_CONVENTION.md`](docs/COMMIT_CONVENTION.md) — 标题/正文格式，便于 `git log --grep` 检索
+- **推送到 GitHub**：双击 `push-to-github.bat`（需本地代理，默认端口 7897）
