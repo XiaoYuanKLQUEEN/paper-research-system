@@ -1,0 +1,7 @@
+# 领域雷达合并配置
+target_total: 25
+min_news: 2
+max_news: 3
+min_tools: 3
+max_tools: 5
+# 其余名额默认分配给论文

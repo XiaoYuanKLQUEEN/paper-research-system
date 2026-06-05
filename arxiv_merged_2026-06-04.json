@@ -1,0 +1,621 @@
+{
+  "target_date": "2026-06-04",
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-05-05",
+      "end": "2026-06-04"
+    },
+    "past_year": {
+      "start": "2025-06-04",
+      "end": "2026-05-04"
+    }
+  },
+  "total_recent": 40,
+  "total_hot": 10,
+  "total_unique": 13,
+  "note": "arXiv 官方 API 本次抓取超时/503；近期论文沿用今日早些时候成功抓取结果，HOT 来自本次 Semantic Scholar",
+  "top_papers": [
+    {
+      "id": "http://arxiv.org/abs/2606.05158v1",
+      "arxiv_id": "2606.05158",
+      "title": "Streaming Communication in Multi-Agent Reasoning",
+      "summary": "Multi-agent reasoning systems adopt a \"generate-then-transfer\" paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce StreamMA, a multi-agent reasoning system that streams each reasoning step to downstream agents as soon as it is generated, pipelining adjacent agents and thus reducing latency. Surprisingly, this pipelining also improves effectiveness: because multi-step reasoning quality is non-uniform and early steps are more reliable than later ones, working with these reliable early steps instead of the full chain prevents error-prone late steps from misleading downstream agents. We formalize both advantages with the first closed-form joint analysis of stream, serial, and single protocols, deriving the effectiveness ordering, speedup upper bound, and cost ratio. Across eight reasoning benchmarks spanning mathematics, science, and code, two frontier LLMs (Claude Opus 4.6 and GPT-5.4), and three topologies (Chain, Tree, Graph), StreamMA outperforms both baselines (avg. +7.3 pp, max +22.4 pp on HMMT 2026; Claude Opus 4.6-high). Beyond these contributions, we discover a \"step-level scaling law\": increasing per-agent steps consistently improves both effectiveness and efficiency, a new scaling dimension orthogonal to and composable with agent-count scaling.",
+      "authors": [
+        "Zhen Yang",
+        "Xiaogang Xu",
+        "Wen Wang",
+        "Cong Chen",
+        "Xander Xu",
+        "Ying-Cong Chen"
+      ],
+      "affiliations": [],
+      "published": "2026-06-03T17:57:04Z",
+      "published_date": "2026-06-03 17:57:04+00:00",
+      "updated": "2026-06-03T17:57:04Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05158v1",
+      "url": "http://arxiv.org/abs/2606.05158v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.3,
+        "recommendation": 8.77
+      },
+      "matched_domain": "多智能体评估与去偏",
+      "matched_keywords": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Streaming_Communication_in_Multi-Agent_Reasoning"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.05106v1",
+      "arxiv_id": "2606.05106",
+      "title": "Arithmetic Pedagogy for Language Models",
+      "summary": "We investigate whether methods of human mathematics pedagogy can guide the training of language models toward arithmetic reasoning. Building on the GASING method -- an Indonesian pedagogy that solves basic arithmetic through a left-to-right procedure aligned with the causal order of token generation -- we operationalize each operation as a computational procedure whose execution trace is serialized into natural-language Chain-of-Thought (CoT) supervision. A small GPT-2 decoder (86M parameters) with a syllabic-agglutinative TOBA tokenizer for Indonesian is trained from scratch on this data using only a next-token prediction objective, without reinforcement learning or reward-based optimization. Monitoring training reveals three distinct learning phases, and mechanistic analyses -- attention-masking interventions on the CoT information graph, residual-stream probing, and logit-lens inspection -- show that the model first internalizes a procedural pathway and subsequently develops an associative, ``mental-arithmetic'' capacity that retrieves intermediate results without explicit step-by-step computation. The trained model reaches over 80% accuracy on held-out problems and attains competitive performance against substantially larger language models, indicating that targeted, pedagogically grounded training can yield strong and economical arithmetic capability at small scale.",
+      "authors": [
+        "Andhika Bernard Lumbantobing",
+        "Hokky Situngkir"
+      ],
+      "affiliations": [],
+      "published": "2026-06-03T17:09:25Z",
+      "published_date": "2026-06-03 17:09:25+00:00",
+      "updated": "2026-06-03T17:09:25Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05106v1",
+      "url": "http://arxiv.org/abs/2606.05106v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.5,
+        "recommendation": 8.5
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Arithmetic_Pedagogy_for_Language_Models"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.05115v1",
+      "arxiv_id": "2606.05115",
+      "title": "Continual Visual and Verbal Learning Through a Child's Egocentric Input",
+      "summary": "Children learn the meanings of words from a continuous, temporally structured stream of egocentric experience. Recent work shows that neural networks can also learn word-referent mappings from a child's egocentric video recordings, but they cycle through the shuffled data for hundreds of epochs, contrasting with how children actually encounter their environment. We introduce BabyCL, a continual multimodal learning framework that processes the SAYCam dataset in a single chronological pass, combining streaming visual representation learning with an image-text contrastive objective. BabyCL combines a multi-stage temporal segmentation of the stream with a dual replay buffer that independently manages visual and multimodal histories, and it is jointly trained with three contrastive losses on a shared backbone. Under a matched optimization budget, BabyCL outperforms streaming learning baselines on the SAYCam Labeled-S 4AFC benchmark, substantially narrowing the gap to an upper bound of offline training. Ablations show that the gains are robust to the length of the online temporal segmentation window and the eviction rule of the replay buffer. Together, these results show that meaningful word-referent mappings can emerge under training conditions much closer to a child's actual experience.",
+      "authors": [
+        "Xiaoyang Jiang",
+        "Yanlai Yang",
+        "Kenneth A. Norman",
+        "Brenden Lake",
+        "Mengye Ren"
+      ],
+      "affiliations": [],
+      "published": "2026-06-03T17:20:18Z",
+      "published_date": "2026-06-03 17:20:18+00:00",
+      "updated": "2026-06-03T17:20:18Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05115v1",
+      "url": "http://arxiv.org/abs/2606.05115v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.4,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.0,
+        "recommendation": 7.87
+      },
+      "matched_domain": "多模态面试评估",
+      "matched_keywords": [
+        "cs.CV",
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Continual_Visual_and_Verbal_Learning_Through_a_Child's_Egocentric_Input"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.05121v1",
+      "arxiv_id": "2606.05121",
+      "title": "Audio Interaction Model",
+      "summary": "Audio is an inherently interactive modality, yet today's Large Audio Language Models (LALMs) are offline, and streaming audio models each handle only a single task such as streaming ASR or voice chatting. It is time to unify them into one online LALM: a model that, through an always-on perceive-decide-respond loop, listens to sound, environment, and instructions in real time and reacts on the fly. We formalize this regime as the Audio Interaction Model, and realize it with Audio-Interaction, a unified streaming model that retains offline task execution while adding online general audio instruction following, from dialogue to full voice chatting, deciding when to respond from the semantics of the stream. To enable this, we propose SoundFlow, a framework that instantiates the perceive-decide-respond loop end to end, from data to training to deployment, through streaming-native data construction, comprehension-aware training, and asynchronous low-latency inference for stable real-time interaction. We further construct StreamAudio-2M, a 2.6M-item streaming corpus spanning 7 fundamental abilities and 28 sub-tasks, and Proactive-Sound-Bench for evaluating proactive audio intervention. Across 8 benchmarks, Audio-Interaction preserves competitive performance on mainstream audio tasks while unlocking capabilities inaccessible to offline LALMs, including real-time ASR, streaming audio instruction following, and proactive help.",
+      "authors": [
+        "Zhifei Xie",
+        "Zihang Liu",
+        "Ze An",
+        "Xiaobin Hu",
+        "Yue Liao",
+        "Ziyang Ma",
+        "Dongchao Yang",
+        "Mingbao Lin",
+        "Deheng Ye",
+        "Shuicheng Yan",
+        "Chunyan Miao"
+      ],
+      "affiliations": [],
+      "published": "2026-06-03T17:26:11Z",
+      "published_date": "2026-06-03 17:26:11+00:00",
+      "updated": "2026-06-03T17:26:11Z",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CL",
+        "cs.MM",
+        "eess.AS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05121v1",
+      "url": "http://arxiv.org/abs/2606.05121v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.4,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.2,
+        "recommendation": 7.6
+      },
+      "matched_domain": "多模态面试评估",
+      "matched_keywords": [
+        "cs.MM",
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Audio_Interaction_Model"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.05085v1",
+      "arxiv_id": "2606.05085",
+      "title": "Automatic Generation of Titles for Research Papers Using Language Models",
+      "summary": "The title of a research paper conveys its primary idea and, occasionally, its conclusions in a clear and concise manner. Choosing an appropriate title is often challenging, and automated title generation can assist authors in this task. In this work, we propose a technique to generate paper titles from abstracts using open-weight pre-trained and large language models. We use the CSPubSum and LREC-COLING-2024 datasets and introduce a new dataset, SpringerSSAT, curated from four Springer journals in the social sciences. Additionally, we use GPT-3.5-turbo in a zero-shot setting to generate titles. Model performance is evaluated with ROUGE, METEOR, MoverScore, BERTScore, and SciBERTScore metrics. Our experiments show that fine-tuned PEGASUS-large outperforms other models, including fine-tuned LLaMA-3-8B and zero-shot GPT-3.5-turbo, across most metrics. We further demonstrate that ChatGPT can generate creative paper titles. Overall, AI-generated titles are generally appropriate and reliable.",
+      "authors": [
+        "Tohida Rehman",
+        "Debarshi Kumar Sanyal",
+        "Samiran Chattopadhyay"
+      ],
+      "affiliations": [],
+      "published": "2026-06-03T16:49:57Z",
+      "published_date": "2026-06-03 16:49:57+00:00",
+      "updated": "2026-06-03T16:49:57Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05085v1",
+      "url": "http://arxiv.org/abs/2606.05085v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.5,
+        "recommendation": 7.17
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Automatic_Generation_of_Titles_for_Research_Papers_Using_Language_Models"
+    },
+    {
+      "paperId": "4e20a171214f49c9ec7cffdd9e3f1ab1a98d4b99",
+      "externalIds": {
+        "DOI": "10.1109/ICoICT66265.2025.11193100",
+        "CorpusId": 282105473
+      },
+      "url": "https://www.semanticscholar.org/paper/4e20a171214f49c9ec7cffdd9e3f1ab1a98d4b99",
+      "title": "Comparative Performance Analysis of Big Five Personality Prediction on X Platform Using BERT and XLNet Models",
+      "citationCount": 0,
+      "influentialCitationCount": 0,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ICoICT66265.2025.11193100?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ICoICT66265.2025.11193100, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationDate": "2025-07-30",
+      "authors": [
+        {
+          "authorId": "2385812955",
+          "affiliations": []
+        },
+        {
+          "authorId": "72777111",
+          "affiliations": []
+        },
+        {
+          "authorId": "2352093331",
+          "affiliations": []
+        }
+      ],
+      "abstract": "The rise of social media platforms has provided vast textual data that can be utilized for personality prediction using natural language processing (NLP) techniques. This study presents a comparative analysis of performance and computational efficiency between two transformer-based models, BERT and XLNet, in predicting the Big Five personality traits from Indonesian tweets collected from Twitter (now known as X). The dataset, consisting of 9,708 tweets labeled by psychologists, underwent preprocessing and was evaluated using multi-label classification. Various configurations were tested, including different optimizers, learning rates, batch sizes, epochs, and dropout rates. The results show that BERT outperforms XLNet in terms of overall F1-score (43.362% vs. 42.822%) and inference time (215.72 ms vs. 7714.83 ms), demonstrating its higher efficiency and stability. Despite XLNet showing slightly better results on certain traits such as Extraversion and Openness, its performance was more sensitive to hyperparameters and limited by longer computational times. This research highlights BERT’s suitability for real-time Indonesian text classification tasks and suggests further exploration on XLNet’s potential using larger datasets and optimized configurations.",
+      "source": "semantic_scholar",
+      "hot_score": 0,
+      "affiliations": [],
+      "arxiv_id": null,
+      "scores": {
+        "relevance": 1.17,
+        "recency": 0.0,
+        "popularity": 0.0,
+        "quality": 1.5,
+        "recommendation": 1.87
+      },
+      "matched_domain": "NLP人格推断",
+      "matched_keywords": [
+        "personality prediction",
+        "personality trait",
+        "Big Five"
+      ],
+      "is_hot_paper": true,
+      "note_filename": "Comparative_Performance_Analysis_of_Big_Five_Personality_Prediction_on_X_Platform_Using_BERT_and_XLNet_Models"
+    },
+    {
+      "paperId": "00ec98b5edf9e7c3d8262ac798bbc230c091e7cb",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2509-09583",
+        "ArXiv": "2509.09583",
+        "DOI": "10.48550/arXiv.2509.09583",
+        "CorpusId": 281252105
+      },
+      "url": "https://www.semanticscholar.org/paper/00ec98b5edf9e7c3d8262ac798bbc230c091e7cb",
+      "title": "Personality-Enhanced Social Recommendations in SAMI: Exploring the Role of Personality Detection in Matchmaking",
+      "citationCount": 0,
+      "influentialCitationCount": 0,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2509.09583, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationDate": "2025-09-11",
+      "authors": [
+        {
+          "authorId": "2380028857",
+          "affiliations": []
+        },
+        {
+          "authorId": "2380028334",
+          "affiliations": []
+        },
+        {
+          "authorId": "2312465381",
+          "affiliations": []
+        },
+        {
+          "authorId": "2338892068",
+          "affiliations": []
+        }
+      ],
+      "abstract": "Social belonging is a vital part of learning, yet online course environments present barriers to the organic formation of social groups. SAMI (Social Agent Mediated Interactions) offers one solution by facilitating student connections, but its effectiveness may be constrained by an incomplete Theory of Mind, limiting its ability to create an effective'mental model'of a student. One facet of this is its inability to intuit personality, which may influence the relevance of its recommendations. To explore this gap, we examine the viability of automated personality inference by proposing a personality detection model utilizing GPT's zeroshot capability to infer Big-Five personality traits from forum introduction posts, often encouraged in online courses. We benchmark its performance against established models, finding that while GPT models show promising results on this specific dataset, performance varies significantly across traits. We identify potential biases toward optimistic trait inference, particularly for traits with skewed distributions. We demonstrate a proof-of-concept integration of personality detection into SAMI's entity-based matchmaking system, focusing on three traits with established connections to positive social formation: Extroversion, Agreeableness, and Openness. This work represents an initial exploration of personality-informed social recommendations in educational settings. While our implementation shows technical feasibility, significant questions remain. We discuss these limitations and outline directions for future work, examining what LLMs specifically capture when performing personality inference and whether personality-based matching meaningfully improves student connections in practice.",
+      "source": "semantic_scholar",
+      "hot_score": 0,
+      "affiliations": [],
+      "arxiv_id": "2509.09583",
+      "scores": {
+        "relevance": 1.26,
+        "recency": 0.0,
+        "popularity": 0.0,
+        "quality": 0.4,
+        "recommendation": 1.6
+      },
+      "matched_domain": "NLP人格推断",
+      "matched_keywords": [
+        "personality detection",
+        "personality inference",
+        "personality trait",
+        "trait inference"
+      ],
+      "is_hot_paper": true,
+      "note_filename": "Personality-Enhanced_Social_Recommendations_in_SAMI_Exploring_the_Role_of_Personality_Detection_in_Matchmaking"
+    },
+    {
+      "paperId": "0a399b77b55ee06df0d77c27b603c0ad116a9ace",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2511-00115",
+        "ArXiv": "2511.00115",
+        "DOI": "10.48550/arXiv.2511.00115",
+        "CorpusId": 282740002
+      },
+      "url": "https://www.semanticscholar.org/paper/0a399b77b55ee06df0d77c27b603c0ad116a9ace",
+      "title": "Cognitive Alignment in Personality Reasoning: Leveraging Prototype Theory for MBTI Inference",
+      "citationCount": 1,
+      "influentialCitationCount": 1,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2511.00115, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationDate": "2025-10-31",
+      "authors": [
+        {
+          "authorId": "2341895765",
+          "affiliations": []
+        },
+        {
+          "authorId": "2396425639",
+          "affiliations": []
+        },
+        {
+          "authorId": "2374178248",
+          "affiliations": []
+        },
+        {
+          "authorId": "2257550085",
+          "affiliations": []
+        },
+        {
+          "authorId": "2366131959",
+          "affiliations": []
+        },
+        {
+          "authorId": "2266007406",
+          "affiliations": []
+        }
+      ],
+      "abstract": "Personality recognition from text is typically cast as hard-label classification, which obscures the graded, prototype-like nature of human personality judgments. We present ProtoMBTI, a cognitively aligned framework for MBTI inference that operationalizes prototype theory within an LLM-based pipeline. First, we construct a balanced, quality-controlled corpus via LLM-guided multi-dimensional augmentation (semantic, linguistic, sentiment). Next, we LoRA-fine-tune a lightweight (<=2B) encoder to learn discriminative embeddings and to standardize a bank of personality prototypes. At inference, we retrieve top-k prototypes for a query post and perform a retrieve--reuse--revise--retain cycle: the model aggregates prototype evidence via prompt-based voting, revises when inconsistencies arise, and, upon correct prediction, retains the sample to continually enrich the prototype library. Across Kaggle and Pandora benchmarks, ProtoMBTI improves over baselines on both the four MBTI dichotomies and the full 16-type task, and exhibits robust cross-dataset generalization. Our results indicate that aligning the inference process with psychological prototype reasoning yields gains in accuracy, interpretability, and transfer for text-based personality modeling.",
+      "source": "semantic_scholar",
+      "hot_score": 1,
+      "affiliations": [],
+      "arxiv_id": "2511.00115",
+      "scores": {
+        "relevance": 0.72,
+        "recency": 0.0,
+        "popularity": 0.03,
+        "quality": 2.0,
+        "recommendation": 1.55
+      },
+      "matched_domain": "NLP人格推断",
+      "matched_keywords": [
+        "MBTI",
+        "text-based personality"
+      ],
+      "is_hot_paper": true,
+      "note_filename": "Cognitive_Alignment_in_Personality_Reasoning_Leveraging_Prototype_Theory_for_MBTI_Inference"
+    },
+    {
+      "paperId": "e7beeb2db44d57737a986875dc5af4ddf15959de",
+      "externalIds": {
+        "DBLP": "journals/information/AnghelAPCIA25",
+        "DOI": "10.3390/info16080652",
+        "CorpusId": 280575602
+      },
+      "url": "https://www.semanticscholar.org/paper/e7beeb2db44d57737a986875dc5af4ddf15959de",
+      "title": "Diagnosing Bias and Instability in LLM Evaluation: A Scalable Pairwise Meta-Evaluator",
+      "citationCount": 13,
+      "influentialCitationCount": 1,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.3390/info16080652?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.3390/info16080652, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationDate": "2025-07-31",
+      "authors": [
+        {
+          "authorId": "2327802316",
+          "affiliations": []
+        },
+        {
+          "authorId": "2375416471",
+          "affiliations": []
+        },
+        {
+          "authorId": "1800474",
+          "affiliations": []
+        },
+        {
+          "authorId": "2812238",
+          "affiliations": []
+        },
+        {
+          "authorId": "2092465",
+          "affiliations": []
+        },
+        {
+          "authorId": "2279062649",
+          "affiliations": []
+        }
+      ],
+      "abstract": "The evaluation of large language models (LLMs) increasingly relies on other LLMs acting as automated judges. While this approach offers scalability and efficiency, it raises serious concerns regarding evaluator reliability, positional bias, and ranking stability. This paper presents a scalable framework for diagnosing positional bias and instability in LLM-based evaluation by using controlled pairwise comparisons judged by multiple independent language models. The system supports mirrored comparisons with reversed response order, prompt injection, and surface-level perturbations (e.g., paraphrasing, lexical noise), enabling fine-grained analysis of evaluator consistency and verdict robustness. Over 3600 pairwise comparisons were conducted across five instruction-tuned open-weight models using ten open-ended prompts. The top-performing model (gemma:7b-instruct) achieved a 66.5% win rate. Evaluator agreement was uniformly high, with 100% consistency across judges, yet 48.4% of verdicts reversed under mirrored response order, indicating strong positional bias. Kendall’s Tau analysis further showed that local model rankings varied substantially across prompts, suggesting that semantic context influences evaluator judgment. All evaluation traces were stored in a graph database (Neo4j), enabling structured querying and longitudinal analysis. The proposed framework provides not only a diagnostic lens for benchmarking models but also a blueprint for fairer and more interpretable LLM-based evaluation. These findings underscore the need for structure-aware, perturbation-resilient evaluation pipelines when benchmarking LLMs. The proposed framework offers a reproducible path for diagnosing evaluator bias and ranking instability in open-ended language tasks. Future work will apply this methodology to educational assessment tasks, using rubric-based scoring and graph-based traceability to evaluate student responses in technical domains.",
+      "source": "semantic_scholar",
+      "hot_score": 1,
+      "affiliations": [],
+      "arxiv_id": null,
+      "scores": {
+        "relevance": 0.8,
+        "recency": 0.0,
+        "popularity": 0.03,
+        "quality": 1.2,
+        "recommendation": 1.38
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "LLM evaluation",
+        "rubric-based scoring"
+      ],
+      "is_hot_paper": true,
+      "note_filename": "Diagnosing_Bias_and_Instability_in_LLM_Evaluation_A_Scalable_Pairwise_Meta-Evaluator"
+    },
+    {
+      "paperId": "d0b26fc297c2779b4c59ae019dc8750f614c3f47",
+      "externalIds": {
+        "ArXiv": "2506.22316",
+        "DBLP": "journals/corr/abs-2506-22316",
+        "DOI": "10.1007/978-981-92-0372-7_2",
+        "CorpusId": 280010889
+      },
+      "url": "https://www.semanticscholar.org/paper/d0b26fc297c2779b4c59ae019dc8750f614c3f47",
+      "title": "Evaluating Scoring Bias in LLM-as-a-Judge",
+      "citationCount": 31,
+      "influentialCitationCount": 1,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.22316, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationDate": "2025-06-27",
+      "authors": [
+        {
+          "authorId": "2292209726",
+          "affiliations": []
+        },
+        {
+          "authorId": "2371069560",
+          "affiliations": []
+        },
+        {
+          "authorId": "2314110211",
+          "affiliations": []
+        },
+        {
+          "authorId": "2314192630",
+          "affiliations": []
+        },
+        {
+          "authorId": "2371426133",
+          "affiliations": []
+        }
+      ],
+      "abstract": "The\"LLM-as-a-Judge\"paradigm, using Large Language Models (LLMs) as automated evaluators, is pivotal to LLM development, offering scalable feedback for complex tasks. However, the reliability of these judges is compromised by various biases. Existing research has heavily concentrated on biases in comparative evaluations. In contrast, scoring-based evaluations-which assign an absolute score and are often more practical in industrial applications-remain under-investigated. To address this gap, we undertake the first dedicated examination of scoring bias in LLM judges. We shift the focus from biases tied to the evaluation targets to those originating from the scoring prompt itself. We formally define scoring bias and identify three novel, previously unstudied types: rubric order bias, score ID bias, and reference answer score bias. We propose a comprehensive framework to quantify these biases, featuring a suite of multi-faceted metrics and an automatic data synthesis pipeline to create a tailored evaluation corpus. Our experiments empirically demonstrate that even the most advanced LLMs suffer from these substantial scoring biases. Our analysis yields actionable insights for designing more robust scoring prompts and mitigating these newly identified biases.",
+      "source": "semantic_scholar",
+      "hot_score": 1,
+      "affiliations": [],
+      "arxiv_id": "2506.22316",
+      "scores": {
+        "relevance": 0.45,
+        "recency": 0.0,
+        "popularity": 0.03,
+        "quality": 1.6,
+        "recommendation": 1.1
+      },
+      "matched_domain": "LLM偏见与公平性",
+      "matched_keywords": [
+        "scoring bias"
+      ],
+      "is_hot_paper": true,
+      "note_filename": "Evaluating_Scoring_Bias_in_LLM-as-a-Judge"
+    },
+    {
+      "paperId": "e9241c66e1b83cac2156c0a53d75e7eb51f2f080",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2508-02020",
+        "ArXiv": "2508.02020",
+        "DOI": "10.48550/arXiv.2508.02020",
+        "CorpusId": 280421287
+      },
+      "url": "https://www.semanticscholar.org/paper/e9241c66e1b83cac2156c0a53d75e7eb51f2f080",
+      "title": "Evaluating Position Bias in Large Language Model Recommendations",
+      "citationCount": 13,
+      "influentialCitationCount": 2,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2508.02020, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationDate": "2025-08-04",
+      "authors": [
+        {
+          "authorId": "2374480915",
+          "affiliations": []
+        },
+        {
+          "authorId": "2372140046",
+          "affiliations": []
+        },
+        {
+          "authorId": "2351808678",
+          "affiliations": []
+        }
+      ],
+      "abstract": "Large Language Models (LLMs) are being increasingly explored as general-purpose tools for recommendation tasks, enabling zero-shot and instruction-following capabilities without the need for task-specific training. While the research community is enthusiastically embracing LLMs, there are important caveats to directly adapting them for recommendation tasks. In this paper, we show that LLM-based recommendation models suffer from position bias, where the order of candidate items in a prompt can disproportionately influence the recommendations produced by LLMs. First, we analyse the position bias of LLM-based recommendations on real-world datasets, where results uncover systemic biases of LLMs with high sensitivity to input orders. Furthermore, we introduce a new prompting strategy to mitigate the position bias of LLM recommendation models called Ranking via Iterative SElection (RISE). We compare our proposed method against various baselines on key benchmark datasets. Experiment results show that our method reduces sensitivity to input ordering and improves stability without requiring model fine-tuning or post-processing.",
+      "source": "semantic_scholar",
+      "hot_score": 2,
+      "affiliations": [],
+      "arxiv_id": "2508.02020",
+      "scores": {
+        "relevance": 0.45,
+        "recency": 0.0,
+        "popularity": 0.06,
+        "quality": 1.1,
+        "recommendation": 0.98
+      },
+      "matched_domain": "LLM偏见与公平性",
+      "matched_keywords": [
+        "position bias"
+      ],
+      "is_hot_paper": true,
+      "note_filename": "Evaluating_Position_Bias_in_Large_Language_Model_Recommendations"
+    },
+    {
+      "paperId": "7821a00468713f478293237078e73cb58d47737b",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2506-10922",
+        "ArXiv": "2506.10922",
+        "DOI": "10.48550/arXiv.2506.10922",
+        "CorpusId": 279318319
+      },
+      "url": "https://www.semanticscholar.org/paper/7821a00468713f478293237078e73cb58d47737b",
+      "title": "Robustly Improving LLM Fairness in Realistic Settings via Interpretability",
+      "citationCount": 12,
+      "influentialCitationCount": 4,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2506.10922, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "publicationDate": "2025-06-12",
+      "authors": [
+        {
+          "authorId": "2314115348",
+          "affiliations": []
+        },
+        {
+          "authorId": "2225941937",
+          "affiliations": []
+        }
+      ],
+      "abstract": "Large language models (LLMs) are increasingly deployed in high-stakes hiring applications, making decisions that directly impact people's careers and livelihoods. While prior studies suggest simple anti-bias prompts can eliminate demographic biases in controlled evaluations, we find these mitigations fail when realistic contextual details are introduced. We address these failures through internal bias mitigation: by identifying and neutralizing sensitive attribute directions within model activations, we achieve robust bias reduction across all tested scenarios. Across leading commercial (GPT-4o, Claude 4 Sonnet, Gemini 2.5 Flash) and open-source models (Gemma-2 27B, Gemma-3, Mistral-24B), we find that adding realistic context such as company names, culture descriptions from public careers pages, and selective hiring constraints (e.g.,``only accept candidates in the top 10\\%\") induces significant racial and gender biases (up to 12\\% differences in interview rates). When these biases emerge, they consistently favor Black over White candidates and female over male candidates across all tested models and scenarios. Moreover, models can infer demographics and become biased from subtle cues like college affiliations, with these biases remaining invisible even when inspecting the model's chain-of-thought reasoning. To address these limitations, our internal bias mitigation identifies race and gender-correlated directions and applies affine concept editing at inference time. Despite using directions from a simple synthetic dataset, the intervention generalizes robustly, consistently reducing bias to very low levels (typically under 1\\%, always below 2.5\\%) while largely maintaining model performance. Our findings suggest that practitioners deploying LLMs for hiring should adopt more realistic evaluation methodologies and consider internal mitigation strategies for equitable outcomes.",
+      "source": "semantic_scholar",
+      "hot_score": 4,
+      "affiliations": [],
+      "arxiv_id": "2506.10922",
+      "scores": {
+        "relevance": 0.45,
+        "recency": 0.0,
+        "popularity": 0.12,
+        "quality": 0.7,
+        "recommendation": 0.94
+      },
+      "matched_domain": "LLM偏见与公平性",
+      "matched_keywords": [
+        "LLM fairness"
+      ],
+      "is_hot_paper": true,
+      "note_filename": "Robustly_Improving_LLM_Fairness_in_Realistic_Settings_via_Interpretability"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+items:
+  - full_name: "CSHaitao/Awesome-LLMs-as-Judges"
+    url: "https://github.com/CSHaitao/Awesome-LLMs-as-Judges"
+    description: "Curated papers and tools for LLM-as-a-Judge research."
+    stars: 585
+    source: "curated"
+  - full_name: "Xxxxsir/LLM-as-Judge-Bias"
+    url: "https://github.com/Xxxxsir/LLM-as-Judge-Bias"
+    description: "Score-Judge: detecting and mitigating LLM-as-Judge bias."
+    stars: 1
+    source: "curated"
+  - full_name: "suryanox/judgelens"
+    url: "https://github.com/suryanox/judgelens"
+    description: "Model-agnostic framework to quantify and correct LLM evaluation bias."
+    stars: 1
+    source: "curated"
+  - full_name: "he-yufeng/TrajBias"
+    url: "https://github.com/he-yufeng/TrajBias"
+    description: "Structural bias in agent trajectory evaluation."
+    stars: 1
+    source: "curated"
+  - full_name: "minnesotanlp/cobbler"
+    url: "https://github.com/minnesotanlp/cobbler"
+    description: "ACL 2024 benchmark for cognitive biases in LLMs."
+    stars: 23
+    source: "curated"
+  - full_name: "frckeepit/llm-production-toolkit"
+    url: "https://github.com/frckeepit/llm-production-toolkit"
+    description: "LLM eval, monitoring and safety utilities for production."
+    stars: 98
+    source: "curated"
+  - full_name: "explodinggradients/ragas"
+    url: "https://github.com/explodinggradients/ragas"
+    description: "RAG evaluation framework; useful for judging retrieval-augmented pipelines."
+    stars: 5000
+    source: "curated"
+  - full_name: "open-compass/opencompass"
+    url: "https://github.com/open-compass/opencompass"
+    description: "Open benchmark platform for LLM evaluation."
+    stars: 4000
+    source: "curated"
+  - full_name: "allenai/open-instruct"
+    url: "https://github.com/allenai/open-instruct"
+    description: "Instruction tuning and evaluation tooling (Allen AI)."
+    stars: 2000
+    source: "curated"

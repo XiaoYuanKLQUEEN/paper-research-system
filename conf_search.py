@@ -70,7 +70,10 @@ DBLP_VENUES = {
     "ICML": {"toc": "conf/icml", "toc_name": "icml{year}"},
     "MICCAI": {"toc": "conf/miccai", "toc_name": None, "venue_query": "MICCAI"},  # MICCAI toc 不稳定，用 venue+year
     "ACL": {"toc": "conf/acl", "toc_name": "acl{year}"},
+    "NAACL": {"toc": "conf/naacl", "toc_name": "naacl{year}"},
     "EMNLP": {"toc": "conf/emnlp", "toc_name": None, "venue_query": "EMNLP"},  # EMNLP toc 不稳定，用 venue+year
+    "CHI": {"toc": "conf/chi", "toc_name": "chi{year}"},
+    "FAccT": {"toc": "conf/facct", "toc_name": "facct{year}", "venue_query": "FAccT"},  # toc 偶发失败时用 venue+year
 }
 
 # 会议 -> arXiv 分类映射（用于相关性评分中的分类匹配加分）
@@ -84,7 +87,10 @@ VENUE_TO_CATEGORIES = {
     "AAAI": ["cs.AI"],
     "MICCAI": ["cs.CV", "eess.IV"],
     "ACL": ["cs.CL"],
+    "NAACL": ["cs.CL"],
     "EMNLP": ["cs.CL"],
+    "CHI": ["cs.HC", "cs.AI"],
+    "FAccT": ["cs.CY", "cs.AI", "cs.CL"],
 }
 
 # 评分权重（去掉新近性维度，因为年份由用户指定）

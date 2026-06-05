@@ -79,6 +79,8 @@ SCORE_MAX = 3.0
 RELEVANCE_TITLE_KEYWORD_BOOST = 0.5
 RELEVANCE_SUMMARY_KEYWORD_BOOST = 0.3
 RELEVANCE_CATEGORY_MATCH_BOOST = 1.0
+# 研究域 priority（1-10）归一化基准，用于加权域得分
+RELEVANCE_PRIORITY_BASELINE = 10.0
 
 # 新近性阈值（天） -> 对应评分
 RECENCY_THRESHOLDS = [
@@ -708,8 +710,17 @@ def calculate_relevance_score(
                 score += RELEVANCE_CATEGORY_MATCH_BOOST
                 dm_keywords.append(cat)
 
-        if score > max_domain_score:
-            max_domain_score = score
+        # 用配置中的 priority（1-10）加权：高优先级域在同等匹配下得分更高
+        priority = domain_config.get('priority', 5)
+        try:
+            priority = float(priority)
+        except (TypeError, ValueError):
+            priority = 5.0
+        priority = max(1.0, min(priority, 10.0))
+        weighted_score = score * (priority / RELEVANCE_PRIORITY_BASELINE)
+
+        if weighted_score > max_domain_score:
+            max_domain_score = weighted_score
             best_domain = domain_name
             domain_matched_keywords = dm_keywords
 
@@ -1210,8 +1221,11 @@ def main():
         with open(args.output, 'w', encoding='utf-8') as f:
             f.write(json_str)
         logger.info("Results saved to: %s", args.output)
-        # 同时输出到 stdout
-        print(json_str)
+        try:
+            sys.stdout.reconfigure(encoding="utf-8")
+            print(json_str)
+        except (AttributeError, UnicodeEncodeError):
+            sys.stdout.buffer.write((json_str + "\n").encode("utf-8", errors="replace"))
 
     logger.info("Top %d papers:", len(top_papers))
     for i, p in enumerate(top_papers, 1):

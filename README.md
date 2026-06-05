@@ -4,6 +4,9 @@ LLM 评估人类职业素养/人格方向的论文追踪系统。
 
 ## 功能
 
+- **领域雷达一键跑** (`run_radar.py`)：论文 + 开源工具 + 权威快讯 → 约 25 条 → Obsidian `10_Daily/YYYY-MM-DD领域雷达.md`
+- **新闻快讯** (`news_digest.py`)：权威 RSS，默认 3 条/天（中文在日报生成阶段）
+- **开源工具** (`tools_scan.py`)：GitHub 检索 + 论文内 repo 链接（不含商业产品）
 - **每日 arXiv 搜索** (`arxiv_daily.py`)：搜索 arXiv + Semantic Scholar，按相关性/新近性/热度/质量评分
 - **图片提取** (`extract_images.py`)：从 arXiv 源码包 / PDF 提取论文图片
 - **顶会搜索** (`conf_search.py`)：DBLP + Semantic Scholar 搜索 NeurIPS/ICML/ACL 等顶会论文
@@ -43,6 +46,9 @@ python conf_search.py --year 2025 --conferences "ACL,ICML" --top-n 10
 
 # 清理旧图片
 python cleanup_images.py
+
+# 领域雷达（论文+工具+新闻，约25条）
+python run_radar.py --date 2026-06-05
 ```
 
 ## 技术栈

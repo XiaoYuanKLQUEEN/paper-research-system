@@ -1,0 +1,22 @@
+# 网络不可达时的备用快讯（官方源标题，供中文模板展示）
+items:
+  - title: "OpenAI — latest research and product updates"
+    url: "https://openai.com/news/"
+    summary_en: "Official OpenAI news feed; check for new model cards, safety reports, and API changes."
+    source: "OpenAI News"
+    tier: official
+    published: "2026-06-04T12:00:00+00:00"
+
+  - title: "Google DeepMind — research blog"
+    url: "https://deepmind.google/discover/blog/"
+    summary_en: "DeepMind blog covers Gemini, agents, and scientific ML breakthroughs."
+    source: "Google DeepMind"
+    tier: official
+    published: "2026-06-04T10:00:00+00:00"
+
+  - title: "Hugging Face — open models and tooling"
+    url: "https://huggingface.co/blog"
+    summary_en: "New open-weight models, datasets, and evaluation harnesses on the HF hub."
+    source: "Hugging Face Blog"
+    tier: official
+    published: "2026-06-03T18:00:00+00:00"

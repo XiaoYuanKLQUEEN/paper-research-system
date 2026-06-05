@@ -1,0 +1,29 @@
+# 权威英文源 → 每日合并后最多取 max_total 条快讯（中文由日报 Agent/脚本撰写）
+max_total: 3
+max_age_days: 7
+
+sources:
+  - name: "OpenAI News"
+    url: "https://openai.com/news/rss.xml"
+    tier: official
+    max_per_run: 1
+
+  - name: "Google DeepMind"
+    url: "https://deepmind.google/blog/rss.xml"
+    tier: official
+    max_per_run: 1
+
+  - name: "Google Research"
+    url: "https://research.google/blog/rss/"
+    tier: official
+    max_per_run: 1
+
+  - name: "Hugging Face Blog"
+    url: "https://huggingface.co/blog/feed.xml"
+    tier: official
+    max_per_run: 1
+
+  - name: "MIT Technology Review — AI"
+    url: "https://www.technologyreview.com/topic/artificial-intelligence/feed/"
+    tier: media
+    max_per_run: 1

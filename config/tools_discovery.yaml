@@ -1,0 +1,23 @@
+# 开源工具发现（不含商业产品 RSS）
+max_candidates: 12
+min_stars: 10
+max_days_since_push: 120
+
+github_queries:
+  - "LLM evaluation language:python stars:>50"
+  - "LLM-as-judge stars:>20"
+  - "agent benchmark stars:>30"
+  - "multimodal LLM stars:>100 pushed:>2025-01-01"
+  - "RAG evaluation stars:>50"
+  - "model alignment benchmark stars:>30"
+
+exclude_name_keywords:
+  - "awesome-list"
+  - "awesome-"
+  - "curated-list"
+  - "interview-prep"
+  - "resume"
+  - "leetcode"
+
+# 从当日论文 JSON 里提取 github.com 链接
+extract_github_from_papers: true
