@@ -1,21 +1,58 @@
 # Paper Research System
 
-> LLM 评估人类职业素养/人格方向的论文自动追踪系统  
-> 每日搜索 arXiv + Semantic Scholar，评分筛选，提取图片，生成深度分析
+> LLM 评估人类职业素养 / 人格方向的论文自动追踪系统  
+> 每日搜索 arXiv + Semantic Scholar，生成 Obsidian 领域雷达（论文 + 开源工具 + 权威快讯）
 
 ---
 
-<<<<<<< HEAD
-- **领域雷达一键跑** (`run_radar.py`)：论文 + 开源工具 + 权威快讯 → 约 25 条 → Obsidian `10_Daily/YYYY-MM-DD领域雷达.md`
-- **新闻快讯** (`news_digest.py`)：权威 RSS，默认 3 条/天（中文在日报生成阶段）
-- **开源工具** (`tools_scan.py`)：GitHub 检索 + 论文内 repo 链接（不含商业产品）
-- **每日 arXiv 搜索** (`arxiv_daily.py`)：搜索 arXiv + Semantic Scholar，按相关性/新近性/热度/质量评分
-- **图片提取** (`extract_images.py`)：从 arXiv 源码包 / PDF 提取论文图片
-- **顶会搜索** (`conf_search.py`)：DBLP + Semantic Scholar 搜索 NeurIPS/ICML/ACL 等顶会论文
-- **图片清理** (`cleanup_images.py`)：每月清理 3 个月前的图片
-=======
-## 快速开始（5 分钟上手）
->>>>>>> c75dac91d0f67f15ddaf37aca6e5bb3ab1479149
+## 功能一览
+
+| 模块 | 脚本 | 说明 |
+|------|------|------|
+| **一键推送（推荐）** | `推送今日领域雷达.bat` | 双击 → 抓取 → 去重 → 生成 Obsidian 日报并自动打开 |
+| 领域雷达流水线 | `push_today_radar.py` / `run_radar.py` | 论文 + 工具 + 快讯 → 约 25 条 |
+| 跨日去重 | `radar_dedup.py` | 近 N 天内已推送的论文/工具/快讯不重复出现 |
+| 论文搜索 | `arxiv_daily.py` | arXiv + Semantic Scholar，四维评分排序 |
+| 日报生成 | `generate_radar_daily.py` | 小白向深读（一句话 + 核心发现 + 配图 + 研究关联） |
+| 新闻快讯 | `news_digest.py` | 权威 RSS，2–3 条/天（中文在生成阶段） |
+| 开源工具 | `tools_scan.py` | GitHub 检索，仅 ⭐≥50，不含商业产品 |
+| 深读档案 | `config/deep_analysis_profiles.yaml` | 高价值论文预设中文深读 |
+| 图片提取 | `extract_images.py` | 从 arXiv 源码 / PDF 提取论文配图 |
+| 顶会搜索 | `conf_search.py` | DBLP + Semantic Scholar 顶会论文 |
+
+---
+
+## 一键推送（最常用）
+
+### Windows：双击运行
+
+```
+推送今日领域雷达.bat
+```
+
+### 命令行
+
+```bash
+python push_today_radar.py
+```
+
+**自动完成：**
+
+1. 抓取今日 arXiv 论文（多抓候选，去重后保留约 22 篇）
+2. 抓取开源 AI 工具（GitHub，⭐≥50）与权威快讯（RSS）
+3. **跨日去重**（论文 14 天 / 工具 7 天 / 快讯 3 天，可配置）
+4. 合并约 **25 条**，生成 Obsidian 笔记
+5. 自动打开 `D:/Obsidian/10_Daily/YYYY-MM-DD领域雷达.md`
+
+**输出格式（对齐 6/2、6/3 手写标准）：**
+
+- 深读 4 篇：中文一句话 + 小白向核心发现（针对什么 → 痛点 → 方法 → 结果）+ 配图 + 研究关联
+- 补课 1 篇：高影响力固定深读（如招聘公平性 2506.10922）
+- 简读区 + 工具卡片（中文简介）+ 快讯（引人入胜一句话）
+
+---
+
+## 快速开始
 
 ### 1. 安装依赖
 
@@ -25,64 +62,85 @@ pip install PyYAML requests PyMuPDF
 
 ### 2. 配置研究兴趣
 
-编辑 `config/research_interests.yaml`，改三个地方：
+编辑 `D:/Obsidian/99_System/Config/research_interests.yaml`（或项目内 `config/research_interests.yaml`）：
 
 ```yaml
-# 你的研究关键词（改成你自己的方向）
 research_domains:
-  "你的领域名":
+  "LLM评估与评分":
     keywords:
-      - "关键词1"
-      - "关键词2"
-    arxiv_categories:        # arXiv 分类代码
-      - "cs.CL"              # NLP
-      - "cs.AI"              # AI
-    priority: 10             # 1-10，越高越优先
+      - "llm-as-a-judge"
+      - "scoring bias"
+    arxiv_categories:
+      - "cs.CL"
+      - "cs.AI"
+    priority: 10
 
-# 排除这些词（避免搜到不相关的论文）
 excluded_keywords:
   - "medical image"
-  - "drug"
 ```
 
-常用 arXiv 分类：
+### 3. 配置 Obsidian 路径
 
-| 代码 | 含义 |
-|------|------|
-| `cs.CL` | NLP / 计算语言学 |
-| `cs.AI` | 人工智能 |
-| `cs.LG` | 机器学习 |
-| `cs.CV` | 计算机视觉 |
-| `cs.MA` | 多智能体系统 |
-| `cs.CY` | 计算机与社会（公平性/偏见） |
-| `cs.HC` | 人机交互（面试/评估） |
-| `cs.MM` | 多媒体（多模态） |
+`push_today_radar.py` 默认：
 
-### 3. 运行每日搜索
+- Vault：`D:/Obsidian`
+- 研究配置：`D:/Obsidian/99_System/Config/research_interests.yaml`
+
+可通过参数修改：
 
 ```bash
-# 基础用法：搜索最近 30 天，返回 15 篇
-python arxiv_daily.py --config config/research_interests.yaml --top-n 15
-
-# 只看最近 7 天（更快）
-python arxiv_daily.py --config config/research_interests.yaml --top-n 10 --days 7
-
-# 跳过 Semantic Scholar（纯 arXiv，最快）
-python arxiv_daily.py --config config/research_interests.yaml --top-n 20 --skip-hot-papers
+python push_today_radar.py --vault "D:/Obsidian" --config "path/to/research_interests.yaml"
 ```
 
-**输出**：`arxiv_filtered.json` — 包含每篇论文的标题、作者、摘要、评分（相关性/新近性/热度/质量）、匹配关键词。
+---
 
-**评分含义**：
+## 领域雷达工作流
 
-| 维度 | 权重 | 说明 |
-|------|------|------|
-| 相关性 | 40% | 和你的关键词有多匹配 |
-| 新近性 | 20% | 最近 30 天=满分，越旧越低 |
-| 热度 | 30% | Semantic Scholar 引用数 |
-| 质量 | 10% | 从摘要推断的创新性 |
+```bash
+# 完整流水线（与一键推送相同，不自动打开 Obsidian）
+python run_radar.py --date 2026-06-05
 
-结果按综合评分降序排列。**建议人工二次筛选**（自动化匹配会有噪声）。
+# arXiv 限流时跳过重新抓取，用本地缓存
+python run_radar.py --date 2026-06-05 --no-arxiv
+
+# 关闭跨日去重
+python push_today_radar.py --no-dedup
+```
+
+**数据流：**
+
+```
+arxiv_daily.py → news_digest.py → tools_scan.py
+       ↓              ↓                ↓
+   [radar_dedup 跨日去重]
+       ↓
+  merge_radar.py → generate_radar_daily.py → Obsidian 10_Daily/
+```
+
+---
+
+## 跨日去重
+
+配置：`config/radar_dedup.yaml`
+
+| 类型 | 默认窗口 | 标识 |
+|------|----------|------|
+| 论文 | 14 天 | arXiv ID / 标题 |
+| 工具 | 7 天 | GitHub `owner/repo` |
+| 快讯 | 3 天 | URL |
+
+- **同日多次运行**：允许刷新，不会把当天内容全部滤掉
+- **历史库**：`data/radar_delivered.json`（首次运行从已有 `radar_merged_*.json` 与 Obsidian 历史日报自动导入）
+- 日报「今日概览」会显示去重统计
+
+---
+
+## 深读档案
+
+高价值论文在 `config/deep_analysis_profiles.yaml` 中预设中文深读（一句话、核心发现、研究关联）。  
+无档案的论文走 `generate_radar_daily.py` 内摘要解析 + 小白向模板。
+
+新增深读：在 yaml 中按 arxiv_id 添加 profile 即可。
 
 ---
 
@@ -92,87 +150,34 @@ python arxiv_daily.py --config config/research_interests.yaml --top-n 20 --skip-
 
 ```bash
 python arxiv_daily.py \
-  --config config/research_interests.yaml \  # 必填：研究配置
-  --top-n 15 \                               # 返回前 N 篇（默认 10）
-  --max-results 200 \                        # arXiv 搜索上限（默认 200）
-  --categories "cs.CL,cs.AI" \               # arXiv 分类（逗号分隔）
-  --days 30 \                                # 搜索天数（默认 30）
-  --skip-hot-papers \                        # 跳过 Semantic Scholar（提速）
-  --output results.json                      # 输出文件名
+  --config config/research_interests.yaml \
+  --target-date 2026-06-05 \
+  --top-n 22 \
+  --skip-hot-papers \
+  --output arxiv_filtered_20260605.json
 ```
 
-**工作流**：arXiv API（近 30 天）→ Semantic Scholar（近 1 年热门）→ 合并去重 → 关键词匹配评分 → 按综合分排序。
+**工作流**：arXiv API（近 30 天）→ Semantic Scholar 热门 → 合并去重 → 关键词评分 → 排序。
 
-> 💡 **网络慢怎么办？** 脚本内置 3 个镜像回退：官方 → 中科院镜像 → 国内镜像，自动切换。
+> 网络慢时自动切换镜像；429 限流时 `push_today_radar.py` 会回退昨日缓存。
 
 ### `extract_images.py` — 提取论文图片
 
 ```bash
-python extract_images.py "2606.02578" "images/2606.02578" "images/2606.02578_index.md"
-#                        ↑ arXiv ID    ↑ 图片保存目录     ↑ 索引文件
+python extract_images.py "2606.06416" "D:/Obsidian/20_Research/Papers/images/2606.06416" "index.md"
 ```
 
-**优先从 arXiv 源码包提取**（.tar.gz 里的 pics/figures/ 目录），找不到才从 PDF 提取。过滤掉小图标/logo（<200px 或 <5KB）。
-
-### `conf_search.py` — 顶会论文搜索
+### `conf_search.py` — 顶会论文
 
 ```bash
-# 搜索 ACL 2025 的评估相关论文
-python conf_search.py --year 2025 --conferences "ACL" --top-n 15 --config conf-papers.yaml
-
-# 搜多个会议
-python conf_search.py --year 2025 --conferences "ACL,EMNLP,NeurIPS,ICML,ICLR,AAAI"
-
-# 搜 CHI（人机交互，AI 面试官相关）
-python conf_search.py --year 2025 --conferences "CHI" --top-n 15 --config conf-papers.yaml
+python conf_search.py --year 2025 --conferences "ACL,CHI,FAccT" --top-n 15 --config conf-papers.yaml
 ```
-
-**工作流**：DBLP API（获取会议论文列表）→ 标题关键词轻量筛选 → Semantic Scholar（补充摘要+引用）→ 三维评分（相关性 40% + 热度 40% + 质量 20%）。
-
-支持的会议：`ACL`, `EMNLP`, `NAACL`, `NeurIPS`, `ICML`, `ICLR`, `AAAI`, `CHI`, `FAccT`
-
-编辑 `conf-papers.yaml` 修改关键词和默认会议列表。
 
 ### `cleanup_images.py` — 清理旧图片
 
 ```bash
 python cleanup_images.py
-
-# 领域雷达（论文+工具+新闻，约25条）
-python run_radar.py --date 2026-06-05
 ```
-
-删除 `images/` 下 3 个月前的图片文件夹。建议每月跑一次。
-
----
-
-## 完整工作流示例
-
-```bash
-# 1. 每日搜索
-python arxiv_daily.py --config config/research_interests.yaml --top-n 15
-
-# 2. 查看结果（挑 3 篇最相关的）
-cat arxiv_filtered.json | python -c "import json,sys; d=json.load(sys.stdin); [print(p['title'][:60], p['scores']['recommendation']) for p in d['top_papers'][:10]]"
-
-# 3. 提取前 3 篇的图片
-python extract_images.py "2606.02578" "images/2606.02578" "images/2606.02578_index.md"
-python extract_images.py "2506.22316" "images/2506.22316" "images/2506.22316_index.md"
-
-# 4. （可选）搜索顶会补充
-python conf_search.py --year 2025 --conferences "ACL,ICML" --top-n 10
-
-# 5. 每月清理
-python cleanup_images.py
-```
-
----
-
-## 环境要求
-
-- Python 3.8+
-- 依赖：`pip install PyYAML requests PyMuPDF`
-- （可选）Semantic Scholar API Key — 免费注册 https://www.semanticscholar.org/product/api#api-key ，能避免 429 限流
 
 ---
 
@@ -180,36 +185,52 @@ python cleanup_images.py
 
 ```
 paper-research-system/
-├── arxiv_daily.py              # 每日搜索主脚本
-├── extract_images.py            # 图片提取
-├── conf_search.py               # 顶会搜索
-├── conf-papers.yaml             # 顶会配置
-├── cleanup_images.py            # 图片清理
+├── 推送今日领域雷达.bat      # 双击一键推送
+├── push_today_radar.py       # 一键推送（含去重 + 打开 Obsidian）
+├── run_radar.py              # 领域雷达流水线
+├── radar_dedup.py            # 跨日去重
+├── arxiv_daily.py            # arXiv 搜索
+├── generate_radar_daily.py   # Obsidian 日报生成
+├── news_digest.py            # RSS 快讯
+├── tools_scan.py             # GitHub 工具扫描
+├── merge_radar.py            # 合并约 25 条
+├── radar_images.py           # 深读配图
+├── extract_images.py
+├── conf_search.py
 ├── config/
-│   └── research_interests.yaml  # 你的研究配置
-└── README.md
+│   ├── research_interests.yaml
+│   ├── radar.yaml            # 配额（论文/工具/快讯）
+│   ├── radar_dedup.yaml      # 去重窗口
+│   ├── deep_analysis_profiles.yaml
+│   ├── tools_discovery.yaml
+│   └── news_sources.yaml
+└── data/
+    └── radar_delivered.json  # 去重历史（本地，不提交）
 ```
 
 ---
 
 ## 常见问题
 
-**Q: 搜索没有结果？**  
-A: 检查 `research_interests.yaml` 里的关键词和 arXiv 分类是否匹配。可以用 `--days 14` 扩大范围试试。
+**Q: 双击 bat 没反应？**  
+A: 确认已安装 Python 且 `pip install PyYAML requests PyMuPDF` 完成。在 cmd 中手动运行 `python push_today_radar.py` 查看报错。
 
-**Q: arXiv 连接超时？**  
-A: 脚本已内置中科院镜像回退，会自动切换。如果所有镜像都失败，检查网络。
+**Q: arXiv 连接超时 / 429？**  
+A: 脚本会自动回退昨日缓存。也可加 `--no-arxiv` 用本地 JSON。
 
-**Q: 评分结果不准？**  
-A: 自动化评分有噪声，建议人工二次筛选。看到高分但明显不相关的论文，在 `excluded_keywords` 里加排除词。
+**Q: 论文重复出现？**  
+A: 检查 `data/radar_delivered.json` 是否正常写入；调整 `config/radar_dedup.yaml` 中的 `lookback_days`。
+
+**Q: 深读质量不够？**  
+A: 在 `config/deep_analysis_profiles.yaml` 为该 arxiv_id 补全中文 profile。
 
 **Q: 怎么改评分权重？**  
-A: 编辑 `arxiv_daily.py` 顶部的 `WEIGHTS_NORMAL`：
-```python
-WEIGHTS_NORMAL = {
-    'relevance': 0.40,  # 相关性
-    'recency': 0.20,    # 新近性
-    'popularity': 0.30, # 热度
-    'quality': 0.10,    # 质量
-}
-```
+A: 编辑 `arxiv_daily.py` 中的 `WEIGHTS_NORMAL`。
+
+---
+
+## 环境要求
+
+- Python 3.8+
+- 依赖：`PyYAML`, `requests`, `PyMuPDF`
+- （可选）Semantic Scholar API Key — https://www.semanticscholar.org/product/api#api-key
