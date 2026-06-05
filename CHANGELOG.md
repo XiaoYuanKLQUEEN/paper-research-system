@@ -2,7 +2,18 @@
 
 > 按时间倒序。历史 commit message 不够精确时，以本文件为准检索功能变更。
 
-格式遵循 [`docs/COMMIT_CONVENTION.md`](docs/COMMIT_CONVENTION.md)。
+格式遵循 [`docs/COMMIT_CONVENTION.md`](docs/COMMIT_CONVENTION.md)。  
+协作流程见 [`docs/GITHUB_WORKFLOW.md`](docs/GITHUB_WORKFLOW.md)。
+
+---
+
+## [2026-06-05] GitHub 开发流程文档
+
+### `待推送` — 文档(流程): 新增 GitHub 开发流程与 Cursor Agent 规则
+
+- `docs/GITHUB_WORKFLOW.md`: 完整开发循环（验证→确认最终版→精确 commit→代理 push）
+- `.cursor/rules/github-workflow.mdc`: Agent 自动遵循的 alwaysApply 规则
+- README / COMMIT_CONVENTION: 链接流程文档
 
 ---
 

@@ -48,6 +48,8 @@
 2. push 前在 CHANGELOG 对应日期下补一行（大功能时）
 3. Agent 流程：**先给出拟用 title + body → 你确认「最终版」→ 再 commit & push**
 
+完整流程见 **[GITHUB_WORKFLOW.md](./GITHUB_WORKFLOW.md)**；Agent 自动加载 **`.cursor/rules/github-workflow.mdc`**。
+
 ---
 
 ## 检索示例

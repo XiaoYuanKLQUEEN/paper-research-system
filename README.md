@@ -239,6 +239,8 @@ A: 编辑 `arxiv_daily.py` 中的 `WEIGHTS_NORMAL`。
 
 ## 变更记录与提交规范
 
+- **GitHub 开发流程**：[`docs/GITHUB_WORKFLOW.md`](docs/GITHUB_WORKFLOW.md) — 分支、验证、提交、推送、Agent 协作全流程
 - **变更日志**：[`CHANGELOG.md`](CHANGELOG.md) — 每次 push 做了什么（历史模糊 commit 以这里为准）
 - **提交规范**：[`docs/COMMIT_CONVENTION.md`](docs/COMMIT_CONVENTION.md) — 标题/正文格式，便于 `git log --grep` 检索
+- **Cursor 规则**：[`.cursor/rules/github-workflow.mdc`](.cursor/rules/github-workflow.mdc) — Agent 自动遵循的推送流程
 - **推送到 GitHub**：双击 `push-to-github.bat`（需本地代理，默认端口 7897）

@@ -1,0 +1,45 @@
+---
+description: GitHub 提交/推送流程——确认最终版、精确 commit message、代理 push
+alwaysApply: true
+---
+
+# GitHub 开发流程（本仓库）
+
+完整文档：`docs/GITHUB_WORKFLOW.md`  
+提交格式：`docs/COMMIT_CONVENTION.md`  
+历史纠正：`CHANGELOG.md`
+
+## 推送前（必须）
+
+1. **等用户确认「最终版」** — 未确认则只改代码，不 commit/push
+2. **先展示拟用 commit**：
+   ```
+   功能(模块): 一句话标题
+   
+   - 可验证变更 1
+   - 可验证变更 2
+   ```
+3. 本地跑相关脚本验证（如 `python push_today_radar.py --no-open`）
+
+## Commit 规则
+
+- 标题：`类型(模块): 具体功能` — 类型=功能|优化|修复|配置|文档|构建
+- 正文：2–6 条 bullet，**禁止**「加上了工具」「更新一下」
+- 一个逻辑功能一个 commit；大功能更新 `CHANGELOG.md`
+
+## Push 规则
+
+- 远程：`origin/main` → `github.com/XiaoYuanKLQUEEN/paper-research-system`
+- **禁止** `git push --force` 到 main（除非用户明确要求）
+- **禁止** 修改 `git config`
+- 推送用代理（勿写全局 config）：
+  ```powershell
+  git -c http.https://github.com.proxy=http://127.0.0.1:7897 -c https.https://github.com.proxy=http://127.0.0.1:7897 push origin main
+  ```
+  或让用户双击 `push-to-github.bat`
+- Windows 中文 message：`.git/COMMIT_MSG_UTF8.txt` + `git commit -F`
+
+## 推送后
+
+- 回报 commit hash + GitHub 链接
+- 说明 CHANGELOG 是否已更新
