@@ -1,0 +1,813 @@
+{
+  "target_date": "2026-06-05",
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-05-06",
+      "end": "2026-06-05"
+    },
+    "past_year": {
+      "start": "2025-06-05",
+      "end": "2026-05-05"
+    }
+  },
+  "total_recent": 200,
+  "total_hot": 0,
+  "total_unique": 138,
+  "top_papers": [
+    {
+      "id": "http://arxiv.org/abs/2606.06416v1",
+      "arxiv_id": "2606.06416",
+      "title": "Unsupervised Skill Discovery for Agentic Data Analysis",
+      "summary": "Inference-time skill augmentation provides a lightweight way to improve data-analytic agents by injecting reusable procedural knowledge without updating model parameters. However, discovering effective skills for data analysis remains challenging, as reliable supervision is expensive and success criteria vary across analytical formats. This raises the key question of how to discover reusable data-analysis skills from unlabeled exploration alone. We propose DataCOPE, an unsupervised verifier-guided skill discovery framework for data-analytic agents. DataCOPE derives verifier signals from the exploration trajectories and uses them to characterize relative quality or aggreement among trajectories. It iteratively coordinates a Data-Analytic Agent for trajectory generation, an Unsupervised Verifier for signal extraction, and a Skill Manager for contrastive skill distillation. For report-style analysis, we instantiate the verifier as an Adaptive Checklist Verifier that derives task-specific criteria, scores reports by verifiable coverage, and iteratively refines the checklist. For reasoning-style analysis, we instantiate it as an Answer Agreement Verifier that groups trajectories by answer agreement and uses self-consistency as an auxiliary signal. We evaluate DataCOPE on report-style analysis from Deep Data Research and reasoning-style analysis from DABStep. Across both settings, DataCOPE consistently improves held-out performance over baselines. Averaged across four model settings, DataCOPE improves the mean score by 9.71% and 32.30% on report-style and reasoning-style tasks respectively.",
+      "authors": [
+        "Zhisong Qiu",
+        "Kangqi Song",
+        "Shengwei Tang",
+        "Shuofei Qiao",
+        "Lei Liang",
+        "Huajun Chen",
+        "Shumin Deng"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T17:20:47Z",
+      "published_date": "2026-06-04 17:20:47+00:00",
+      "updated": "2026-06-04T17:20:47Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06416v1",
+      "url": "http://arxiv.org/abs/2606.06416v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.2,
+        "recommendation": 8.4
+      },
+      "matched_domain": "多智能体评估与去偏",
+      "matched_keywords": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Unsupervised_Skill_Discovery_for_Agentic_Data_Analysis"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06380v1",
+      "arxiv_id": "2606.06380",
+      "title": "Emergent Language as an Approach to Conscious AI",
+      "summary": "The question of whether artificial systems can be conscious remains open, in part because existing approaches either evaluate systems against theory-derived checklists (discriminative) or engineer consciousness-inspired modules directly (architectural); both leave open whether observed structures are artifacts of human language priors. We propose a generative methodology: emergent language (EL) in multi-agent reinforcement learning, where agents start from minimal (no language, no concept of self, minimal exposure to human text) and develop communication under task pressure alone, ensuring causal attributability to task demands rather than inherited human language priors. We position our methodology by discussing how EL serves as a generative tool for studying consciousness-relevant structure, including the role of environment complexity and the interpretation of emergent communication. As a proof of concept, we instantiate this methodology in a minimal environment and show that agents develop self-referential communication, including an echo-mismatch detection circuit that is not predicted by task structure or architecture alone but emerges from a specific environmental affordance.",
+      "authors": [
+        "Zengqing Wu",
+        "Chuan Xiao"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T16:47:41Z",
+      "published_date": "2026-06-04 16:47:41+00:00",
+      "updated": "2026-06-04T16:47:41Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.MA",
+        "cs.NE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06380v1",
+      "url": "http://arxiv.org/abs/2606.06380v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 0.8,
+        "recommendation": 8.27
+      },
+      "matched_domain": "多智能体评估与去偏",
+      "matched_keywords": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Emergent_Language_as_an_Approach_to_Conscious_AI"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06242v1",
+      "arxiv_id": "2606.06242",
+      "title": "Benchmarking Open-Source Layout Detection Models for Data Snapshot Extraction from Institutional Documents",
+      "summary": "Institutional documents contain substantial amounts of operational and analytical information embedded within figures and tables. Current approaches for extracting visual content from documents are largely built around generic document layout analysis, where figures and tables are treated as uniformly relevant document objects rather than semantically meaningful analytical artifacts. In this work, we introduce a benchmark dataset and evaluation framework for \\textit{data snapshot extraction}, the task of identifying and localizing semantically meaningful visual artifacts within institutional documents. The benchmark spans humanitarian reports, World Bank policy research working papers, and project appraisal documents, and includes annotations for figures and tables that contain reusable analytical information. Using this dataset, we benchmarked multiple open-source layout detection models and evaluated both detection performance and spatial extraction quality. Our results show that current models struggle to generalize to operational institutional documents despite strong performance on conventional academic benchmarks. Common failure modes include confusion between analytical and non-analytical content, fragmentation of composite analytical artifacts, and incomplete extraction of contextual information required for interpretation. These findings highlight a persistent gap between generic document layout analysis and operationally useful data snapshot extraction. We release the source PDFs, annotation dataset, metadata, and source code to support future research in operational document intelligence. The dataset is available at https://huggingface.co/datasets/ai4data/data-snapshot and the source code is available at https://github.com/worldbank/ai4data/tree/main/experimental/data-snapshot.",
+      "authors": [
+        "AJ Carl P. Dy",
+        "Aivin V. Solatorio"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T14:47:40Z",
+      "published_date": "2026-06-04 14:47:40+00:00",
+      "updated": "2026-06-04T14:47:40Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.IR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06242v1",
+      "url": "http://arxiv.org/abs/2606.06242v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.4,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.2,
+        "recommendation": 7.6
+      },
+      "matched_domain": "多模态面试评估",
+      "matched_keywords": [
+        "cs.CV",
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Benchmarking_Open-Source_Layout_Detection_Models_for_Data_Snapshot_Extraction_from_Institutional_Documents"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06473v1",
+      "arxiv_id": "2606.06473",
+      "title": "MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery",
+      "summary": "Large language model (LLM) agents are increasingly applied to long-horizon tasks such as scientific discovery and machine learning engineering (MLE), where sustained self-evolution becomes a key capability. However, existing MLE agents suffer from inter-branch information isolation, memoryless search, and lack of hierarchical control, which together hinder long-horizon optimization. We present MLEvolve, an LLM-based self-evolving multi-agent framework for end-to-end machine learning algorithm discovery. By extending tree search to Progressive MCGS, MLEvolve enables cross-branch information flow through graph-based reference edges and gradually shifts the search from broad exploration to focused exploitation with an entropy-inspired progressive schedule. To allow the agent to evolve with accumulated experience, we introduce Retrospective Memory, which combines a cold-start domain knowledge base with a dynamic global memory for task-specific experience retrieval and reuse. For stable long-horizon iteration, we further decouple strategic planning from code generation with adaptive coding modes. Evaluation on MLE-Bench shows that MLEvolve achieves state-of-the-art performance across multiple dimensions including average medal rate and valid submission rate under a 12-hour budget (half the standard runtime). Moreover, MLEvolve also outperforms specialized algorithm discovery methods including AlphaEvolve on mathematical algorithm optimization tasks, demonstrating strong cross-domain generalization. Our code is available at https://github.com/InternScience/MLEvolve.",
+      "authors": [
+        "Shangheng Du",
+        "Xiangchao Yan",
+        "Jinxin Shi",
+        "Zongsheng Cao",
+        "Shiyang Feng",
+        "Zichen Liang",
+        "Boyuan Sun",
+        "Tianshuo Peng",
+        "Yifan Zhou",
+        "Xin Li",
+        "Jie Zhou",
+        "Liang He",
+        "Bo Zhang",
+        "Lei Bai"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T17:55:59Z",
+      "published_date": "2026-06-04 17:55:59+00:00",
+      "updated": "2026-06-04T17:55:59Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06473v1",
+      "url": "http://arxiv.org/abs/2606.06473v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.3,
+        "recommendation": 7.43
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "MLEvolve_A_Self-Evolving_Framework_for_Automated_Machine_Learning_Algorithm_Discovery"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06261v1",
+      "arxiv_id": "2606.06261",
+      "title": "DAST: A VLM-LLM Framework for Cross-Interface Anomaly Detection in O-RAN",
+      "summary": "O-RAN enables a disaggregated baseband stack with programmable functions that communicate over standardized open interfaces. The same openness that enables multi-vendor composition also expands the attack surface across logically decoupled tiers that make up the compute continuum. Among these threats, Denial-of-Service and performance-degradation attacks, which account for the majority of catalogued O-RAN threats, are particularly difficult to detect. Traditional Time-Series Anomaly Detection (TSAD) methods fail in this new regime where labelled baselines are scarce, threats evolve faster than detectors can be retrained, and the high-dimensional multivariate telemetry overwhelms monolithic inference models. To address these challenges, we present DAST, a zero-shot multi-agent framework for cross-interface anomaly detection in O-RAN that chains a three-stage VLM $\\rightarrow$ LLM $\\rightarrow$ VLM pipeline. DAST converts multivariate KPI streams into visual representations, scores textual per-interface descriptions against O-RAN domain knowledge, and verifies suspects on high-resolution heatmaps to output the problematic interfaces, the anomalous time intervals, an indicative O-RAN WG11-aligned operational impact rating and the decision rationale. We evaluate DAST on real network traces collected from an O-RAN testbed under representative performance degradation scenarios, achieving 0.910 F1-Score and 0.843 Accuracy, outperforming state-of-the-art TSAD baselines.",
+      "authors": [
+        "Francesco Spinelli",
+        "Esteban Municio",
+        "Pau Baguer",
+        "Gines Garcia-Aviles",
+        "Xavier Costa-Perez"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T15:05:04Z",
+      "published_date": "2026-06-04 15:05:04+00:00",
+      "updated": "2026-06-04T15:05:04Z",
+      "categories": [
+        "cs.NI",
+        "cs.AI",
+        "cs.ET",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06261v1",
+      "url": "http://arxiv.org/abs/2606.06261v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.3,
+        "recommendation": 7.43
+      },
+      "matched_domain": "多智能体评估与去偏",
+      "matched_keywords": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "DAST_A_VLM-LLM_Framework_for_Cross-Interface_Anomaly_Detection_in_O-RAN"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06474v1",
+      "arxiv_id": "2606.06474",
+      "title": "Self-Augmenting Retrieval for Diffusion Language Models",
+      "summary": "Discrete diffusion language models generate text by iteratively denoising an entire response in parallel. At each step, they predict tentative tokens for every masked position, committing the confident predictions to the output and discarding the unconfident ones. We show that the discarded tokens are in fact a useful lookahead signal for retrieval-augmented generation: even low-confidence tokens often surface salient entities early in the denoising trajectory, enabling retrieval of stronger evidence before the output is finalized. We exploit this through Self-Augmenting Retrieval for Diffusion Language Models (SARDI), a dynamic RAG framework that uses these lookahead tokens to guide retrieval during denoising. SARDI is training-free, retriever-agnostic, and applicable to any reasoning-capable discrete diffusion language model. Across five multi-hop QA benchmarks, SARDI outperforms current training-free diffusion and autoregressive retrieval baselines at up to $8\\times$ higher throughput.",
+      "authors": [
+        "Paul Jünger",
+        "Justin Lovelace",
+        "Linxi Zhao",
+        "Dongyoung Go",
+        "Kilian Q. Weinberger"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T17:56:27Z",
+      "published_date": "2026-06-04 17:56:27+00:00",
+      "updated": "2026-06-04T17:56:27Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06474v1",
+      "url": "http://arxiv.org/abs/2606.06474v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.0,
+        "recommendation": 7.33
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Self-Augmenting_Retrieval_for_Diffusion_Language_Models"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06320v1",
+      "arxiv_id": "2606.06320",
+      "title": "Learning What to Forget: Improving LLM Unlearning via Learned Token-Level Importance",
+      "summary": "Machine unlearning aims to remove targeted knowledge from a trained model while preserving its general capabilities. For autoregressive language models, not all tokens in a forget sample are equally relevant to forgetting. Existing approaches either ignore this heterogeneity or rely on auxiliary models, heuristics, or external annotations to estimate each token's relevance for forgetting. We instead characterize it through the interaction with the retain objective: a token is forget-specific to the extent that minimizing the forget loss on that token does not conflict with retain optimality. We formalize this perspective as a joint optimization problem over the model parameters and the token weights and show that, under a natural separation condition, the resulting objective recovers the oracle forget-specific token support. Motivated by this formulation, we introduce Alternating Token-Weighted Unlearning (ATWU), a lightweight framework that jointly learns token forget-specificity and model parameters during unlearning using a simple linear scorer over the hidden states, without external token level supervision. Across TOFU and RWKU, ATWU achieves state of the art forget-retain trade-offs, outperforming sample-level methods, probability-based token weighting heuristics, and auxiliary-model-based approaches. Moreover, the learned scores align substantially better with ground truth forget-specific spans, indicating that ATWU identifies semantically meaningful token level forgetting signals. Overall, our results suggest that retain conflict provides an effective criterion for identifying what language models should forget, enabling unsupervised learning of token level forget-specificity directly from model representations with minimal computational overhead.",
+      "authors": [
+        "Gizem Yüce",
+        "Giorgos Nikolaou",
+        "Nicolas Flammarion"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T15:56:32Z",
+      "published_date": "2026-06-04 15:56:32+00:00",
+      "updated": "2026-06-04T15:56:32Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06320v1",
+      "url": "http://arxiv.org/abs/2606.06320v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.0,
+        "recommendation": 7.33
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Learning_What_to_Forget_Improving_LLM_Unlearning_via_Learned_Token-Level_Importance"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06178v1",
+      "arxiv_id": "2606.06178",
+      "title": "Learning to Route LLMs from Implicit Cost-Performance Preferences via Meta-Learning",
+      "summary": "Large language models (LLMs) present a trade-off between performance and cost, where more powerful models incur greater expense. LLM routing aims to mitigate expenses while maintaining performance by sending queries to the most suitable model. However, existing methods cannot perform well for different user cost-performance preferences. To address this gap, we introduce a novel perceptive LLM routing paradigm for personalized and user-centric cost-performance optimization, which efficiently learns users' implicit preferences through little interaction. To handle the challenge of heterogeneous user needs, we formulate preference profiles as a set of distinct tasks in contextual bandit and propose MetaRouter, a meta-learning framework designed for preference-aware LLM routing. Experimental results show that MetaRouter outperforms strong baselines on both in-distribution and out-of-distribution tasks. Furthermore, it exhibits high efficiency in learning user preferences, robustness to changes in the routable LLMs, and scalability to multi-model routing.",
+      "authors": [
+        "Jiahao Zeng",
+        "Ming Tang",
+        "Ningning Ding"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T13:53:03Z",
+      "published_date": "2026-06-04 13:53:03+00:00",
+      "updated": "2026-06-04T13:53:03Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06178v1",
+      "url": "http://arxiv.org/abs/2606.06178v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.0,
+        "recommendation": 7.33
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Learning_to_Route_LLMs_from_Implicit_Cost-Performance_Preferences_via_Meta-Learning"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06168v1",
+      "arxiv_id": "2606.06168",
+      "title": "ProSarc: Prosody-Aware Sarcasm Recognition Framework via Temporal Prosodic Incongruity",
+      "summary": "We present ProSarc, an audio-only framework that detects sarcasm by modelling temporal prosodic incongruity, that is, the mismatch between local prosodic dynamics and the utterance-level emotional baseline. Dual encoding paths, a Global Emotion Encoder and a Temporal Prosody Encoder (BiLSTM + multi-head attention), feed a Prosodic Incongruity Analyzer that produces a scalar incongruity score for classification. Monte Carlo dropout provides uncertainty estimates, and an attention-based mechanism localises sarcastic onset without frame-level labels. ProSarc outperforms prior audio-only methods on MUStARD++ (F1=75.3) and generalises to spontaneous (PodSarc, F1=62.9) and cross-lingual speech (MuSaG, F1=65.6). Ten-run validation confirms the contribution of incongruity modelling (Wilcoxon p=0.002, Cohen's d=1.51). Human evaluation shows that model uncertainty tracks perceptual ambiguity and predicted onsets align with human-annotated temporal windows.",
+      "authors": [
+        "Prathamjyot Singh",
+        "Ashima Sood",
+        "Sahil Sharma",
+        "Jasmeet Singh"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T13:40:09Z",
+      "published_date": "2026-06-04 13:40:09+00:00",
+      "updated": "2026-06-04T13:40:09Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06168v1",
+      "url": "http://arxiv.org/abs/2606.06168v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.0,
+        "recommendation": 7.33
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "ProSarc_Prosody-Aware_Sarcasm_Recognition_Framework_via_Temporal_Prosodic_Incongruity"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06109v1",
+      "arxiv_id": "2606.06109",
+      "title": "Harnessing Structural Context for Entity Alignment Foundation Models",
+      "summary": "Entity alignment (EA) aims to identify equivalent entities across heterogeneous knowledge graphs (KGs) and is a key component of knowledge fusion and cross-KG reasoning. The recent EA foundation model demonstrates that alignment knowledge, once pretrained, can be directly applied to diverse previously unseen KG pairs. However, it still underuses structural context in two places: cross-KG interaction is weak during encoding, and final candidate ranking still relies too heavily on coarse similarity. We address these limitations with ContextEA, an enhanced encoder-decoder framework for transferable EA. On the encoder side, we introduce a cross-KG interaction encoder that unifies the two KGs with anchor bridges and performs earlier relation-aware cross-graph propagation. On the decoder side, we introduce a structural calibration decoder that calibrates alignment scores with entity-level, neighborhood-level, relation-level, and anchor-aware structural evidence. This design strengthens both structural context construction and structural context exploitation while remaining lightweight. Experiments on 29 EA datasets in OpenEA, SRPRS, and DBP show consistent gains over strong transferable baselines. Notably, the pretrained ContextEA already surpasses the finetuned baselines on all three benchmark groups, demonstrating substantially stronger transfer to unseen KGs. These results suggest that explicitly harnessing structural context is an effective direction for improving EA foundation models.",
+      "authors": [
+        "Xingyu Chen",
+        "Yuanning Cui",
+        "Zequn Sun",
+        "Wei Hu"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T12:57:36Z",
+      "published_date": "2026-06-04 12:57:36+00:00",
+      "updated": "2026-06-04T12:57:36Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06109v1",
+      "url": "http://arxiv.org/abs/2606.06109v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.0,
+        "recommendation": 7.33
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Harnessing_Structural_Context_for_Entity_Alignment_Foundation_Models"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06087v1",
+      "arxiv_id": "2606.06087",
+      "title": "LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents",
+      "summary": "Agent systems increasingly use textual skills to encode reusable task procedures, but injecting these skills into the prompt at every step incurs substantial context overhead and exposes skill content as plaintext. We present LatentSkill, a framework that converts textual skills into plug-and-play LoRA adapters through a pretrained hypernetwork. LatentSkill stores skill knowledge in weight space rather than context space, removing per-step skill tokens while preserving modular loading, scaling, and composition. On ALFWorld and Search-QA, LatentSkill outperforms the corresponding in-context skill baseline while using substantially fewer prefill tokens: it improves ALFWorld success by 21.4 and 13.4 points on the seen and unseen splits with 64.1% fewer prefill tokens, and improves Search-QA exact match by 3.0 points with 72.2% lower skill-token overhead. Further analysis shows that generated skill LoRAs form a structured semantic geometry, can be precisely controlled via the LoRA scaling coefficient, and can be composed through parameter-space arithmetic when skill components are aligned. These findings suggest that weight-space skills provide an efficient, modular, and less exposed substrate for extending LLM agents.",
+      "authors": [
+        "Aofan Yu",
+        "Chenyu Zhou",
+        "Tianyi Xu",
+        "Zihan Guo",
+        "Rong Shan",
+        "Zhihui Fu",
+        "Jun Wang",
+        "Weiwen Liu",
+        "Yong Yu",
+        "Weinan Zhang",
+        "Jianghao Lin"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T12:26:09Z",
+      "published_date": "2026-06-04 12:26:09+00:00",
+      "updated": "2026-06-04T12:26:09Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06087v1",
+      "url": "http://arxiv.org/abs/2606.06087v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.0,
+        "recommendation": 7.33
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "LatentSkill_From_In-Context_Textual_Skills_to_In-Weight_Latent_Skills_for_LLM_Agents"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06492v1",
+      "arxiv_id": "2606.06492",
+      "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+      "summary": "Code language models need repository-level context to resolve imports, APIs, and project conventions. Existing methods inject this knowledge as long inputs (retrieved through RAG or dependency analysis) or through per-repository fine-tuning and LoRA -- costly at repository scale and brittle to evolving codebases. We introduce Code2LoRA, a hypernetwork framework that generates repository-specific LoRA adapters, effectively injecting repository knowledge with zero inference-time token overhead. Code2LoRA supports two usage scenarios: Code2LoRA-Static converts a single repository snapshot into an adapter, suitable for comprehension of stable codebases; while Code2LoRA-Evo maintains an adapter backed by a GRU hidden state updated per code diff, suitable for active development of evolving codebases. To evaluate Code2LoRA against parameter-efficient fine-tuning baselines, we build RepoPeftBench, a benchmark of 604 Python repositories with two tracks: a static track with 40K training and 12K test assertion-completion tasks, and an evolution track with 215K commit-derived training and 87K commit-derived test tasks. On the static track, Code2LoRA-Static achieves 63.8% cross-repo and 66.2% in-repo exact match, matching the per-repository LoRA upper bound; on the evolution track, Code2LoRA-Evo achieves 60.3% cross-repo exact match (+5.2 pp over a single shared LoRA). Code2LoRA's code can be found at https://anonymous.4open.science/r/code2lora-6857; the model checkpoints and RepoPeftBench datasets can be found at https://huggingface.co/code2lora.",
+      "authors": [
+        "Liliana Hotsko",
+        "Yinxi Li",
+        "Yuntian Deng",
+        "Pengyu Nie"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T17:59:46Z",
+      "published_date": "2026-06-04 17:59:46+00:00",
+      "updated": "2026-06-04T17:59:46Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06492v1",
+      "url": "http://arxiv.org/abs/2606.06492v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.6,
+        "recommendation": 7.2
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Code2LoRA_Hypernetwork-Generated_Adapters_for_Code_Language_Models_under_Software_Evolution"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06080v1",
+      "arxiv_id": "2606.06080",
+      "title": "On Advantage Estimates for Max@K Policy Gradients",
+      "summary": "Reinforcement learning with verifiable rewards is widely used for post-training reasoning models, but sparse outcome rewards make exploration difficult. A complementary approach is to optimize inference-time objectives such as pass@K and max@K directly, yet existing policy-gradient estimators for these objectives use different signals, baselines, and normalizations, making their relationships unclear. We study this issue through baseline design and advantage centering. Starting from the advantage estimator of a leading method in the field, we show that it is policy-gradient unbiased but yields a non-centered advantage. We then introduce a Leave-Two-Out baseline that preserves policy-gradient unbiasedness while making realized batch advantages exactly centered. The resulting method, MaxPO, has an efficient quadratic-time implementation and integrates naturally into group-based RL for LLM post-training. We further derive the canonical finite-batch advantage for max@K, providing a unified view of existing advantage estimators. Empirically, we verify that the L2O baseline reduces gradient variance and outperforms non-centered alternatives.",
+      "authors": [
+        "Shota Takashiro",
+        "Soichiro Nishimori",
+        "Paavo Parmas",
+        "Yongmin Kim",
+        "Kohsei Matsutani",
+        "Gouki Minegishi",
+        "Yusuke Iwasawa",
+        "Takeshi Kojima",
+        "Yutaka Matsuo"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T12:16:39Z",
+      "published_date": "2026-06-04 12:16:39+00:00",
+      "updated": "2026-06-04T12:16:39Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06080v1",
+      "url": "http://arxiv.org/abs/2606.06080v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.5,
+        "recommendation": 7.17
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "On_Advantage_Estimates_for_Max@K_Policy_Gradients"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06058v1",
+      "arxiv_id": "2606.06058",
+      "title": "MDP-GRPO: Stabilized Group Relative Policy Optimization for Multi-Constraint Instruction Following",
+      "summary": "Reinforcement learning with verifiable rewards is ideal for multi-constraint instruction following, yet standard group-relative policy optimization (GRPO) becomes unstable under discrete, low-dispersion rewards, where within-group reward distributions are frequently homogeneous. We identify and formalize three pathologies of z-score group normalization in this regime: low-variance amplification, mean-centering blindness, and zero-variance collapse. To address them, we propose MDP-GRPO, which stabilizes learning through (1) multi-temperature sampling to increase reward dispersion, (2) dual-anchor advantages to restore gradients in homogeneous groups and stop mean-centering blindness, (3) prospect-theoretic shaping to bound updates and penalize violations based on Kahneman and Tversky's theory, and (4) asymmetric KL regularization. Evaluated on FollowBench, IFEval, and a curated multi-constraint dataset, MDP-GRPO outperforms standard GRPO, improving strict constraint satisfaction by up to 5.0% on Llama-3.2-3B. Our method also enables stable convergence with small group sizes while preserving general capabilities on MMLU and ARC.",
+      "authors": [
+        "Mohammad Mahdi Salmani-Zarchi",
+        "Zahra Rahimi",
+        "Heshaam Faili",
+        "Mohammad Javad Dousti"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T11:58:59Z",
+      "published_date": "2026-06-04 11:58:59+00:00",
+      "updated": "2026-06-04T11:58:59Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06058v1",
+      "url": "http://arxiv.org/abs/2606.06058v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.5,
+        "recommendation": 7.17
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "MDP-GRPO_Stabilized_Group_Relative_Policy_Optimization_for_Multi-Constraint_Instruction_Following"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06467v1",
+      "arxiv_id": "2606.06467",
+      "title": "You Only Index Once: Cross-Layer Sparse Attention with Shared Routing",
+      "summary": "Long-context inference in modern LLMs is increasingly constrained by decoding efficiency, especially in reasoning-heavy settings where models generate long intermediate chains of thought. Existing sparse attention methods often face a practical efficiency-quality trade-off. Structured block sparse methods typically provide stronger acceleration but incur noticeable quality loss, while token sparse methods are usually more accurate yet deliver limited end-to-end speedup because top-k routing over the full cache remains expensive. In this work, we propose cross-layer sparse attention (CLSA), which is built on top of KV-sharing architectures such as YOCO. The core idea is to share not only the KV cache across cross-decoder layers, but also the routing index. A single indexer computes token-level top-k selection once and reuses the resulting index across layers, thereby preserving the fine-grained selectivity of token sparse attention while amortizing the routing overhead. The resulting architecture improves all major inference bottlenecks jointly, including pre-filling, KV-cache storage, and long-context decoding. Experiments across short-context and long-context benchmarks show that CLSA is both accurate and efficient, achieving up to 7.6x decoding speedup and 17.1x overall throughput improvement at 128K context. These results suggest a more complete architectural solution for long-context LLMs that jointly advances model quality and inference efficiency.",
+      "authors": [
+        "Yutao Sun",
+        "Yanqi Zhang",
+        "Li Dong",
+        "Jianyong Wang",
+        "Furu Wei"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T17:54:04Z",
+      "published_date": "2026-06-04 17:54:04+00:00",
+      "updated": "2026-06-04T17:54:04Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06467v1",
+      "url": "http://arxiv.org/abs/2606.06467v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.2,
+        "recommendation": 7.07
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "You_Only_Index_Once_Cross-Layer_Sparse_Attention_with_Shared_Routing"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06286v1",
+      "arxiv_id": "2606.06286",
+      "title": "LLMs Can Leak Training Data But Do They Want To? A Propensity-Aware Evaluation of Memorization in LLMs",
+      "summary": "Large language models can reproduce training data, but existing memorization evaluations mostly measure whether models can be forced to do so, rather than whether they do so under ordinary use. We introduce PropMe, a propensity-aware framework for memorization evaluation that contrasts prefix-based capability attacks with non-adversarial evaluations. We propose a metric transformation that, applied to existing functions, allows to create propensity metrics. We further introduce SimpleTrace, a lightweight tracing pipeline built on infini-gram that deterministically attributes model generations to large-scale training corpora and computes verbatim, near-verbatim, and propensity-transformed memorization metrics. Evaluating two fully-open models: Comma and DFM Decoder on two datasets: Common Pile and Dynaword in two languages, we find a consistent gap between capability and propensity: prefix attacks elicit substantially stronger memorization signals than generic or dataset-specific prompts, while propensity scores remain low overall. Thus, the models can reveal training data when directly elicited, but rarely do so in more common non-adversarial settings. We also find that DFM Decoder, which is continually pre-trained from Comma, exhibits reduced memorization and memorization propensity for Common Pile, confirming that memorization capability can decrease when later training emphasizes partially different data. Our results suggest, and we encourage, that memorization audits should report both worst-case extractability and ordinary leakage propensity in order to have a more comprehensive view of this phenomenon.",
+      "authors": [
+        "Gianluca Barmina",
+        "Peter Schneider-Kamp",
+        "Lukas Galke Poech"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T15:25:24Z",
+      "published_date": "2026-06-04 15:25:24+00:00",
+      "updated": "2026-06-04T15:25:24Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06286v1",
+      "url": "http://arxiv.org/abs/2606.06286v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.2,
+        "recommendation": 7.07
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "LLMs_Can_Leak_Training_Data_But_Do_They_Want_To_A_Propensity-Aware_Evaluation_of_Memorization_in_LLMs"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06160v1",
+      "arxiv_id": "2606.06160",
+      "title": "Where does Absolute Position come from in decoder-only Transformers?",
+      "summary": "RoPE-trained transformers distinguish absolute position in their attention patterns, even though RoPE encodes only relative offsets in the inner product. We trace this leakage to two architectural components, The causal mask is responsible for the first: its per-query softmax denominator depends on the absolute query position by construction. The residual stream supplies the second. Under causal attention the activation at position $0$ attends only to itself and runs as a closed dynamical system from the embedding of the token at that position; downstream attention reads this trajectory through sink-reading heads. Both components appear in all three architectures we study, in architecturally specific balance: NTK scaling suppresses the residual-stream component, sliding-window attention allows it to accumulate with depth, and standard RoPE sits between. Replacing the \\texttt{BOS} embedding before the forward pass removes $40\\%$ of the residual-stream component at early queries. Attention sinks are token-anchored stabilizers that pass forward a deterministic fingerprint of the token at position $0$, constant across inputs when that token is the auto-prepended \\texttt{BOS} and varying with it otherwise.",
+      "authors": [
+        "Valeria Ruscio",
+        "Umberto Nanni",
+        "Fabrizio Silvestri"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T13:32:38Z",
+      "published_date": "2026-06-04 13:32:38+00:00",
+      "updated": "2026-06-04T13:32:38Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06160v1",
+      "url": "http://arxiv.org/abs/2606.06160v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.2,
+        "recommendation": 7.07
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Where_does_Absolute_Position_come_from_in_decoder-only_Transformers"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06197v1",
+      "arxiv_id": "2606.06197",
+      "title": "Improving Answer Extraction in Context-based Question Answering Systems Using LLMs",
+      "summary": "Question answering (QA) systems have achieved notable progress with the advent of large language models (LLMs). However, they still face challenges in accurately extracting and generating precise answers from given contexts, particularly when dealing with complex or ambiguous queries. Existing approaches often struggle with contextual understanding, answer consistency, and generalization across diverse domains. In this work, we propose a question answering system based on large language models, where the input consists of a textual context and a corresponding question, and the output is a concise and accurate answer. The motivation behind this research lies in addressing the limitations of current QA systems, particularly their tendency to produce irrelevant or imprecise responses despite having access to the correct context. Our methodology involves fine-tuning a pre-trained LLM on a benchmark QA dataset to improve its contextual comprehension and answer extraction capabilities. Specifically, we utilize the Stanford Question Answering Dataset (SQuAD1.1), which provides high-quality context-question-answer triplets for supervised training and evaluation. Experimental results show that the fine-tuned Roberta-base model achieves the highest performance, attaining a ROUGE-L score of 86.84%, a BLEU score of 28.24%, and a BERTScore of 95.38%. These results indicate strong accuracy and answer relevance, demonstrating the effectiveness of the proposed approach for context-based question answering tasks. Furthermore, the findings confirm that targeted fine-tuning substantially improves the reliability and precision of QA systems.",
+      "authors": [
+        "Hafez Abdelghaffar",
+        "Ahmed Alansary",
+        "Ali Hamdi"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T14:04:11Z",
+      "published_date": "2026-06-04 14:04:11+00:00",
+      "updated": "2026-06-04T14:04:11Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06197v1",
+      "url": "http://arxiv.org/abs/2606.06197v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.1,
+        "recommendation": 7.03
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Improving_Answer_Extraction_in_Context-based_Question_Answering_Systems_Using_LLMs"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06481v1",
+      "arxiv_id": "2606.06481",
+      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
+      "summary": "As AI writing assistants become increasingly integrated into real-world drafting and revision workflows, many documents are no longer purely human-written or AI-generated, but instead result from progressive human-AI co-editing. However, existing AI-text detection benchmarks largely focus on final outputs and provide limited understanding of how AI authorship signals emerge, accumulate, or disappear throughout the revision process. We introduce OpAI-Bench, an operation-guided benchmark for studying progressive human-to-AI text transformation across document, sentence, token, and span granularities. Starting from human-written documents, OpAI-Bench constructs nine sequentially revised versions for each sample under predefined AI coverage levels and five representative AI edit operations, covering four domains while preserving complete authorship provenance at multiple granularities. The benchmark supports comprehensive evaluation with 8 document-level detectors, 7 sentence-level detectors, and 2 fine-grained token/span-level detectors. Experiments reveal that AI-text detectability is governed not only by the proportion of AI-edited content, but also by edit operation, domain, and cumulative revision history. Interestingly, we notice that mixed-authorship intermediate versions are often harder to detect than both fully human and heavily AI-edited endpoints, exposing non-monotonic detection patterns missed by existing benchmarks. OpAI-Bench provides a controlled testbed for analyzing whether, when, and how AI-assisted writing becomes detectable under realistic progressive editing scenarios. Our code and benchmark are available at https://github.com/VILA-Lab/OpAI-Bench.",
+      "authors": [
+        "Sondos Mahmoud Bsharat",
+        "Jiacheng Liu",
+        "Xiaohan Zhao",
+        "Tianjun Yao",
+        "Xinyi Shang",
+        "Yi Tang",
+        "Jiacheng Cui",
+        "Ahmed Elhagry",
+        "Salwa K. Al Khatib",
+        "Hao Li",
+        "Salman Khan",
+        "Zhiqiang Shen"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T17:58:05Z",
+      "published_date": "2026-06-04 17:58:05+00:00",
+      "updated": "2026-06-04T17:58:05Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06481v1",
+      "url": "http://arxiv.org/abs/2606.06481v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 0.7,
+        "recommendation": 6.9
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Operation-Guided_Progressive_Human-to-AI_Text_Transformation_Benchmark_for_Multi-Granularity_AI-Text_Detection"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.06294v1",
+      "arxiv_id": "2606.06294",
+      "title": "Towards One-to-Many Temporal Grounding",
+      "summary": "Temporal Grounding (TG) aims to localize video segments corresponding to a textual query. Prior research predominantly focuses on single-segment retrieval. Real-world scenarios, however, often require localizing multiple disjoint segments for a single query -- a setting we term One-to-Many Temporal Grounding (OMTG). Previous state-of-the-art MLLMs, optimized for one-to-one settings, struggle in this context, often yielding near-zero scores due to a lack of event cardinality perception. To bridge this gap, we present a systematic solution with three key contributions. First, we establish the first comprehensive OMTG benchmark, introducing Count Accuracy (C-Acc) and Effective Temporal F1 (EtF1) as evaluation metrics. Second, we curate a high-quality OMTG dataset comprising 56k samples through a sophisticated construction pipeline. Third, we develop novel temporal and caption reward functions specifically designed for OMTG. In particular, the caption reward leverages Chain-of-Thought reasoning over dense video captions to explicitly guide policy optimization toward both preciseness and completeness. Extensive experiments show our model achieves a new state-of-the-art EtF1 of 43.65\\% on OMTG Bench, outperforming Gemini 2.5 Pro and Seed-1.8 by 15.85\\% and 15.61\\%, respectively.",
+      "authors": [
+        "Qi Xu",
+        "Yue Tan",
+        "Shihao Chen",
+        "Jiahao Meng",
+        "Anna Wang",
+        "Shunping Ji",
+        "Hao Fei",
+        "Jason Li"
+      ],
+      "affiliations": [],
+      "published": "2026-06-04T15:31:22Z",
+      "published_date": "2026-06-04 15:31:22+00:00",
+      "updated": "2026-06-04T15:31:22Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06294v1",
+      "url": "http://arxiv.org/abs/2606.06294v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 1.6,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.3,
+        "recommendation": 6.9
+      },
+      "matched_domain": "多模态面试评估",
+      "matched_keywords": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Towards_One-to-Many_Temporal_Grounding"
+    }
+  ],
+  "dedup": {
+    "skipped_papers": 0,
+    "skipped_titles": [],
+    "kept_after_dedup": 20
+  }
+}

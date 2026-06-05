@@ -107,7 +107,7 @@ def main():
     repos: List[Dict] = []
     seen: Set[str] = set()
 
-    if args.papers_json and Path(args.papers_json).exists():
+    if cfg.get("extract_github_from_papers") and args.papers_json and Path(args.papers_json).exists():
         papers_data = json.loads(Path(args.papers_json).read_text(encoding="utf-8"))
         papers = papers_data.get("top_papers") or papers_data.get("papers") or []
         for r in extract_github_from_papers(papers):
@@ -136,8 +136,22 @@ def main():
             repos.append(normalize_repo(item, q))
         time.sleep(1.5)
 
-    repos.sort(key=lambda x: (x.get("source") == "paper_link", x.get("stars", 0)), reverse=True)
-    selected = repos[:max_candidates]
+    eval_hints = (
+        "eval", "judge", "benchmark", "assessment", "bias", "agent", "rubric", "ragas"
+    )
+
+    def tool_rank(r: Dict) -> tuple:
+        text = (
+            (r.get("description") or "") + " " + (r.get("matched_query") or "") + " "
+            + (r.get("full_name") or "")
+        ).lower()
+        rel = sum(1 for h in eval_hints if h in text)
+        # 不按 paper_link 优先：论文附带 repo 常为 0 star，不应挤占工具榜
+        return (rel, r.get("stars", 0))
+
+    repos.sort(key=tool_rank, reverse=True)
+    # 正式工具榜：仅保留达到 min_stars 的 GitHub 项目，杜绝 0 star 噪声
+    selected = [r for r in repos if r.get("stars", 0) >= min_stars][:max_candidates]
 
     if not selected:
         fb_path = Path(__file__).parent / "config" / "tools_fallback.yaml"

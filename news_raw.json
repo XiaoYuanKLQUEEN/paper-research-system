@@ -1,0 +1,25 @@
+{
+  "fetched_at": "2026-06-05T15:16:05.384863",
+  "count": 2,
+  "items": [
+    {
+      "title": "How Endava is redesigning software delivery around AI agents",
+      "url": "https://openai.com/index/endava-frontiers",
+      "summary_en": "",
+      "published": "2026-06-04T12:00:00+00:00",
+      "source": "OpenAI News",
+      "tier": "official"
+    },
+    {
+      "title": "How courts are coping with a flood of AI-generated lawsuits",
+      "url": "https://www.technologyreview.com/2026/06/04/1138391/courts-coping-ai-lawsuits/",
+      "summary_en": "Most days in her chambers, Judge Maritza Braswell, a federal magistrate judge in Colorado, sifts through stacks of documents written by people without a lawyer. Many of them can’t afford to hire a lawyer, and others have cases too weak or too small to interest one. She reads each one carefully, mindful of how daunting it is to walk into the courtroom alone.&nbsp; Lately, like many judges across the US, she has seen a noticeable uptick in such filings. According to a new study that examined 4.5 m",
+      "published": "2026-06-04T10:50:18+00:00",
+      "source": "MIT Technology Review — AI",
+      "tier": "media"
+    }
+  ],
+  "dedup": {
+    "skipped_news": 2
+  }
+}

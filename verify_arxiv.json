@@ -1,0 +1,220 @@
+{
+  "target_date": "2026-06-04",
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-05-05",
+      "end": "2026-06-04"
+    },
+    "past_year": {
+      "start": "2025-06-04",
+      "end": "2026-05-04"
+    }
+  },
+  "total_recent": 40,
+  "total_hot": 0,
+  "total_unique": 23,
+  "top_papers": [
+    {
+      "id": "http://arxiv.org/abs/2606.05158v1",
+      "arxiv_id": "2606.05158",
+      "title": "Streaming Communication in Multi-Agent Reasoning",
+      "summary": "Multi-agent reasoning systems adopt a \"generate-then-transfer\" paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce StreamMA, a multi-agent reasoning system that streams each reasoning step to downstream agents as soon as it is generated, pipelining adjacent agents and thus reducing latency. Surprisingly, this pipelining also improves effectiveness: because multi-step reasoning quality is non-uniform and early steps are more reliable than later ones, working with these reliable early steps instead of the full chain prevents error-prone late steps from misleading downstream agents. We formalize both advantages with the first closed-form joint analysis of stream, serial, and single protocols, deriving the effectiveness ordering, speedup upper bound, and cost ratio. Across eight reasoning benchmarks spanning mathematics, science, and code, two frontier LLMs (Claude Opus 4.6 and GPT-5.4), and three topologies (Chain, Tree, Graph), StreamMA outperforms both baselines (avg. +7.3 pp, max +22.4 pp on HMMT 2026; Claude Opus 4.6-high). Beyond these contributions, we discover a \"step-level scaling law\": increasing per-agent steps consistently improves both effectiveness and efficiency, a new scaling dimension orthogonal to and composable with agent-count scaling.",
+      "authors": [
+        "Zhen Yang",
+        "Xiaogang Xu",
+        "Wen Wang",
+        "Cong Chen",
+        "Xander Xu",
+        "Ying-Cong Chen"
+      ],
+      "affiliations": [],
+      "published": "2026-06-03T17:57:04Z",
+      "published_date": "2026-06-03 17:57:04+00:00",
+      "updated": "2026-06-03T17:57:04Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05158v1",
+      "url": "http://arxiv.org/abs/2606.05158v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.3,
+        "recommendation": 8.77
+      },
+      "matched_domain": "多智能体评估与去偏",
+      "matched_keywords": [
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Streaming_Communication_in_Multi-Agent_Reasoning"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.05106v1",
+      "arxiv_id": "2606.05106",
+      "title": "Arithmetic Pedagogy for Language Models",
+      "summary": "We investigate whether methods of human mathematics pedagogy can guide the training of language models toward arithmetic reasoning. Building on the GASING method -- an Indonesian pedagogy that solves basic arithmetic through a left-to-right procedure aligned with the causal order of token generation -- we operationalize each operation as a computational procedure whose execution trace is serialized into natural-language Chain-of-Thought (CoT) supervision. A small GPT-2 decoder (86M parameters) with a syllabic-agglutinative TOBA tokenizer for Indonesian is trained from scratch on this data using only a next-token prediction objective, without reinforcement learning or reward-based optimization. Monitoring training reveals three distinct learning phases, and mechanistic analyses -- attention-masking interventions on the CoT information graph, residual-stream probing, and logit-lens inspection -- show that the model first internalizes a procedural pathway and subsequently develops an associative, ``mental-arithmetic'' capacity that retrieves intermediate results without explicit step-by-step computation. The trained model reaches over 80% accuracy on held-out problems and attains competitive performance against substantially larger language models, indicating that targeted, pedagogically grounded training can yield strong and economical arithmetic capability at small scale.",
+      "authors": [
+        "Andhika Bernard Lumbantobing",
+        "Hokky Situngkir"
+      ],
+      "affiliations": [],
+      "published": "2026-06-03T17:09:25Z",
+      "published_date": "2026-06-03 17:09:25+00:00",
+      "updated": "2026-06-03T17:09:25Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05106v1",
+      "url": "http://arxiv.org/abs/2606.05106v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.5,
+        "recommendation": 8.5
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Arithmetic_Pedagogy_for_Language_Models"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.05115v1",
+      "arxiv_id": "2606.05115",
+      "title": "Continual Visual and Verbal Learning Through a Child's Egocentric Input",
+      "summary": "Children learn the meanings of words from a continuous, temporally structured stream of egocentric experience. Recent work shows that neural networks can also learn word-referent mappings from a child's egocentric video recordings, but they cycle through the shuffled data for hundreds of epochs, contrasting with how children actually encounter their environment. We introduce BabyCL, a continual multimodal learning framework that processes the SAYCam dataset in a single chronological pass, combining streaming visual representation learning with an image-text contrastive objective. BabyCL combines a multi-stage temporal segmentation of the stream with a dual replay buffer that independently manages visual and multimodal histories, and it is jointly trained with three contrastive losses on a shared backbone. Under a matched optimization budget, BabyCL outperforms streaming learning baselines on the SAYCam Labeled-S 4AFC benchmark, substantially narrowing the gap to an upper bound of offline training. Ablations show that the gains are robust to the length of the online temporal segmentation window and the eviction rule of the replay buffer. Together, these results show that meaningful word-referent mappings can emerge under training conditions much closer to a child's actual experience.",
+      "authors": [
+        "Xiaoyang Jiang",
+        "Yanlai Yang",
+        "Kenneth A. Norman",
+        "Brenden Lake",
+        "Mengye Ren"
+      ],
+      "affiliations": [],
+      "published": "2026-06-03T17:20:18Z",
+      "published_date": "2026-06-03 17:20:18+00:00",
+      "updated": "2026-06-03T17:20:18Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05115v1",
+      "url": "http://arxiv.org/abs/2606.05115v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.4,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 2.0,
+        "recommendation": 7.87
+      },
+      "matched_domain": "多模态面试评估",
+      "matched_keywords": [
+        "cs.CV",
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Continual_Visual_and_Verbal_Learning_Through_a_Child's_Egocentric_Input"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.05121v1",
+      "arxiv_id": "2606.05121",
+      "title": "Audio Interaction Model",
+      "summary": "Audio is an inherently interactive modality, yet today's Large Audio Language Models (LALMs) are offline, and streaming audio models each handle only a single task such as streaming ASR or voice chatting. It is time to unify them into one online LALM: a model that, through an always-on perceive-decide-respond loop, listens to sound, environment, and instructions in real time and reacts on the fly. We formalize this regime as the Audio Interaction Model, and realize it with Audio-Interaction, a unified streaming model that retains offline task execution while adding online general audio instruction following, from dialogue to full voice chatting, deciding when to respond from the semantics of the stream. To enable this, we propose SoundFlow, a framework that instantiates the perceive-decide-respond loop end to end, from data to training to deployment, through streaming-native data construction, comprehension-aware training, and asynchronous low-latency inference for stable real-time interaction. We further construct StreamAudio-2M, a 2.6M-item streaming corpus spanning 7 fundamental abilities and 28 sub-tasks, and Proactive-Sound-Bench for evaluating proactive audio intervention. Across 8 benchmarks, Audio-Interaction preserves competitive performance on mainstream audio tasks while unlocking capabilities inaccessible to offline LALMs, including real-time ASR, streaming audio instruction following, and proactive help.",
+      "authors": [
+        "Zhifei Xie",
+        "Zihang Liu",
+        "Ze An",
+        "Xiaobin Hu",
+        "Yue Liao",
+        "Ziyang Ma",
+        "Dongchao Yang",
+        "Mingbao Lin",
+        "Deheng Ye",
+        "Shuicheng Yan",
+        "Chunyan Miao"
+      ],
+      "affiliations": [],
+      "published": "2026-06-03T17:26:11Z",
+      "published_date": "2026-06-03 17:26:11+00:00",
+      "updated": "2026-06-03T17:26:11Z",
+      "categories": [
+        "cs.SD",
+        "cs.AI",
+        "cs.CL",
+        "cs.MM",
+        "eess.AS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05121v1",
+      "url": "http://arxiv.org/abs/2606.05121v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.4,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.2,
+        "recommendation": 7.6
+      },
+      "matched_domain": "多模态面试评估",
+      "matched_keywords": [
+        "cs.MM",
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Audio_Interaction_Model"
+    },
+    {
+      "id": "http://arxiv.org/abs/2606.05085v1",
+      "arxiv_id": "2606.05085",
+      "title": "Automatic Generation of Titles for Research Papers Using Language Models",
+      "summary": "The title of a research paper conveys its primary idea and, occasionally, its conclusions in a clear and concise manner. Choosing an appropriate title is often challenging, and automated title generation can assist authors in this task. In this work, we propose a technique to generate paper titles from abstracts using open-weight pre-trained and large language models. We use the CSPubSum and LREC-COLING-2024 datasets and introduce a new dataset, SpringerSSAT, curated from four Springer journals in the social sciences. Additionally, we use GPT-3.5-turbo in a zero-shot setting to generate titles. Model performance is evaluated with ROUGE, METEOR, MoverScore, BERTScore, and SciBERTScore metrics. Our experiments show that fine-tuned PEGASUS-large outperforms other models, including fine-tuned LLaMA-3-8B and zero-shot GPT-3.5-turbo, across most metrics. We further demonstrate that ChatGPT can generate creative paper titles. Overall, AI-generated titles are generally appropriate and reliable.",
+      "authors": [
+        "Tohida Rehman",
+        "Debarshi Kumar Sanyal",
+        "Samiran Chattopadhyay"
+      ],
+      "affiliations": [],
+      "published": "2026-06-03T16:49:57Z",
+      "published_date": "2026-06-03 16:49:57+00:00",
+      "updated": "2026-06-03T16:49:57Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05085v1",
+      "url": "http://arxiv.org/abs/2606.05085v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.5,
+        "recommendation": 7.17
+      },
+      "matched_domain": "LLM评估与评分",
+      "matched_keywords": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "note_filename": "Automatic_Generation_of_Titles_for_Research_Papers_Using_Language_Models"
+    }
+  ]
+}

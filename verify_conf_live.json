@@ -1,0 +1,91 @@
+{
+  "year": 2024,
+  "conferences_searched": [
+    "NAACL"
+  ],
+  "total_found": 200,
+  "total_filtered": 26,
+  "total_enriched": 0,
+  "top_papers": [
+    {
+      "title": "ICLE++: Modeling Fine-Grained Traits for Holistic Essay Scoring",
+      "authors": [
+        "Shengjie Li 0002",
+        "Vincent Ng 0001"
+      ],
+      "dblp_url": "https://dblp.org/rec/conf/naacl/0002024",
+      "year": 2024,
+      "conference": "NAACL",
+      "doi": "10.18653/V1/2024.NAACL-LONG.468",
+      "venue": "NAACL-HLT",
+      "source": "dblp",
+      "scores": {
+        "relevance": 1.0,
+        "popularity": 0.0,
+        "quality": 0.0,
+        "recommendation": 1.33
+      },
+      "matched_domain": "conf_papers",
+      "matched_keywords": [
+        "scoring",
+        "trait",
+        "cs.CL"
+      ],
+      "note_filename": "ICLE++_Modeling_Fine-Grained_Traits_for_Holistic_Essay_Scoring"
+    },
+    {
+      "title": "Sentence-level Media Bias Analysis with Event Relation Graph",
+      "authors": [
+        "Yuanyuan Lei 0001",
+        "Ruihong Huang"
+      ],
+      "dblp_url": "https://dblp.org/rec/conf/naacl/0001H24",
+      "year": 2024,
+      "conference": "NAACL",
+      "doi": "10.18653/V1/2024.NAACL-LONG.292",
+      "venue": "NAACL-HLT",
+      "source": "dblp",
+      "scores": {
+        "relevance": 0.75,
+        "popularity": 0.0,
+        "quality": 0.0,
+        "recommendation": 1.0
+      },
+      "matched_domain": "conf_papers",
+      "matched_keywords": [
+        "bias",
+        "cs.CL"
+      ],
+      "note_filename": "Sentence-level_Media_Bias_Analysis_with_Event_Relation_Graph"
+    },
+    {
+      "title": "Polarity Calibration for Opinion Summarization",
+      "authors": [
+        "Yuanyuan Lei 0001",
+        "Kaiqiang Song",
+        "Sangwoo Cho",
+        "Xiaoyang Wang 0001",
+        "Ruihong Huang",
+        "Dong Yu 0001"
+      ],
+      "dblp_url": "https://dblp.org/rec/conf/naacl/0001SCWHY24",
+      "year": 2024,
+      "conference": "NAACL",
+      "doi": "10.18653/V1/2024.NAACL-LONG.291",
+      "venue": "NAACL-HLT",
+      "source": "dblp",
+      "scores": {
+        "relevance": 0.75,
+        "popularity": 0.0,
+        "quality": 0.0,
+        "recommendation": 1.0
+      },
+      "matched_domain": "conf_papers",
+      "matched_keywords": [
+        "calibration",
+        "cs.CL"
+      ],
+      "note_filename": "Polarity_Calibration_for_Opinion_Summarization"
+    }
+  ]
+}

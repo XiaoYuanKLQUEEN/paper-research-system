@@ -73,6 +73,10 @@ def main():
     tools = tdata.get("items") or []
     news = ndata.get("items") or []
 
+    # 工具榜再次过滤：去掉 0 star / 低 star 噪声
+    min_tool_stars = rcfg.get("min_tool_stars", 50)
+    tools = [t for t in tools if (t.get("stars") or 0) >= min_tool_stars]
+
     bundle = allocate(papers, tools, news, rcfg)
 
     out = {

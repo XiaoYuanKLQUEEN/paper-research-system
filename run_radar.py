@@ -5,7 +5,7 @@
 import argparse
 import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -55,8 +55,16 @@ def main():
             pool_script = ROOT / "build_papers_pool.py"
             if pool_script.exists():
                 subprocess.call([sys.executable, str(pool_script)], cwd=str(ROOT))
+            # 同日 arXiv 失败时，回退昨日成功抓取的缓存（窗口高度重叠）
+            yesterday = (
+                datetime.strptime(args.date, "%Y-%m-%d") - timedelta(days=1)
+            ).strftime("%Y%m%d")
+            prev = ROOT / f"arxiv_filtered_{yesterday}.json"
             pool = ROOT / "papers_pool.json"
-            if pool.exists():
+            if prev.exists() and prev.stat().st_size > 100:
+                papers_out.write_text(prev.read_text(encoding="utf-8"), encoding="utf-8")
+                print(f"Using previous day arXiv cache: {prev}", file=sys.stderr)
+            elif pool.exists():
                 papers_out.write_text(pool.read_text(encoding="utf-8"), encoding="utf-8")
             elif (ROOT / "verify_arxiv.json").exists():
                 papers_out.write_text(
@@ -98,6 +106,7 @@ def main():
     ]) != 0:
         return 1
 
+    # 深读配图（在生成 Markdown 前由 generate_radar_daily 内调用 radar_images）
     daily = Path(args.vault) / "10_Daily" / f"{args.date}领域雷达.md"
     return run([
         sys.executable,

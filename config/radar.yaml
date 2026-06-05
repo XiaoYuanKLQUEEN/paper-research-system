@@ -4,4 +4,5 @@ min_news: 2
 max_news: 3
 min_tools: 3
 max_tools: 5
+min_tool_stars: 50
 # 其余名额默认分配给论文

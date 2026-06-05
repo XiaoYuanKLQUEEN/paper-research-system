@@ -1,25 +1,2 @@
-# 临时文件
-arxiv_filtered.json
-conf_test.json
-conf_filtered.json
-verify_arxiv.json
-verify_conf.json
-verify_conf_live.json
-papers_pool.json
-news_raw.json
-tools_raw.json
-radar_merged_*.json
-arxiv_filtered_*.json
-
-# 凭据
-.git_cred_tmp
-
-# Python
-__pycache__/
-*.pyc
-
-# 克隆的仓库
-evil-read-arxiv/
-
-# 系统文件
-desktop.ini
+# 去重历史（本地状态，勿提交）
+data/radar_delivered.json

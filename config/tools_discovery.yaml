@@ -1,6 +1,6 @@
 # 开源工具发现（不含商业产品 RSS）
 max_candidates: 12
-min_stars: 10
+min_stars: 50
 max_days_since_push: 120
 
 github_queries:
@@ -19,5 +19,5 @@ exclude_name_keywords:
   - "resume"
   - "leetcode"
 
-# 从当日论文 JSON 里提取 github.com 链接
-extract_github_from_papers: true
+# 论文附带 repo 常为 0 star，不进入工具榜（仅在论文条目里保留链接）
+extract_github_from_papers: false

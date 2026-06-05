@@ -1,0 +1,7 @@
+# 领域雷达跨日去重配置
+lookback_days: 14          # 论文默认去重窗口
+tool_lookback_days: 7      # 工具重复周期更短
+news_lookback_days: 3      # 快讯更新快，3 天内不重复
+history_file: data/radar_delivered.json
+paper_fetch_buffer: 45     # arXiv 多抓候选，去重后再截断
+min_news_after_dedup: 2    # 快讯去重后至少保留条数（不足时用次新条目补位）

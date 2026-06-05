@@ -1,0 +1,141 @@
+{
+  "fetched_at": "2026-06-05T15:16:27.609205",
+  "count": 12,
+  "items": [
+    {
+      "name": "cua",
+      "full_name": "trycua/cua",
+      "url": "https://github.com/trycua/cua",
+      "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
+      "stars": 17661,
+      "pushed_at": "2026-06-05T03:16:45Z",
+      "source": "github_search",
+      "matched_query": "agent benchmark stars:>30",
+      "language": "HTML"
+    },
+    {
+      "name": "AgentBench",
+      "full_name": "THUDM/AgentBench",
+      "url": "https://github.com/THUDM/AgentBench",
+      "description": "A Comprehensive Benchmark to Evaluate LLMs as Agents (ICLR'24)",
+      "stars": 3469,
+      "pushed_at": "2026-02-08T17:01:05Z",
+      "source": "github_search",
+      "matched_query": "agent benchmark stars:>30",
+      "language": "Python"
+    },
+    {
+      "name": "mlflow",
+      "full_name": "mlflow/mlflow",
+      "url": "https://github.com/mlflow/mlflow",
+      "description": "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data.",
+      "stars": 26308,
+      "pushed_at": "2026-06-05T06:35:21Z",
+      "source": "github_search",
+      "matched_query": "LLM evaluation language:python stars:>50",
+      "language": "Python"
+    },
+    {
+      "name": "haystack",
+      "full_name": "deepset-ai/haystack",
+      "url": "https://github.com/deepset-ai/haystack",
+      "description": "Open-source AI orchestration framework for building context-engineered, production-ready LLM applications. Design modular pipelines and agent workflows with explicit control over retrieval, routing, memory, and generation. Built for scalable agents, RAG, multimodal applications, semantic search, and",
+      "stars": 25462,
+      "pushed_at": "2026-06-05T07:05:26Z",
+      "source": "github_search",
+      "matched_query": "multimodal LLM stars:>100 pushed:>2025-01-01",
+      "language": "MDX"
+    },
+    {
+      "name": "promptfoo",
+      "full_name": "promptfoo/promptfoo",
+      "url": "https://github.com/promptfoo/promptfoo",
+      "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
+      "stars": 21901,
+      "pushed_at": "2026-06-05T05:04:15Z",
+      "source": "github_search",
+      "matched_query": "RAG evaluation stars:>50",
+      "language": "TypeScript"
+    },
+    {
+      "name": "agentmemory",
+      "full_name": "rohitg00/agentmemory",
+      "url": "https://github.com/rohitg00/agentmemory",
+      "description": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+      "stars": 21279,
+      "pushed_at": "2026-06-04T19:26:37Z",
+      "source": "github_search",
+      "matched_query": "agent benchmark stars:>30",
+      "language": "TypeScript"
+    },
+    {
+      "name": "adk-python",
+      "full_name": "google/adk-python",
+      "url": "https://github.com/google/adk-python",
+      "description": "An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.",
+      "stars": 19991,
+      "pushed_at": "2026-06-04T23:45:20Z",
+      "source": "github_search",
+      "matched_query": "LLM evaluation language:python stars:>50",
+      "language": "Python"
+    },
+    {
+      "name": "opik",
+      "full_name": "comet-ml/opik",
+      "url": "https://github.com/comet-ml/opik",
+      "description": "Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.",
+      "stars": 19433,
+      "pushed_at": "2026-06-05T01:28:09Z",
+      "source": "github_search",
+      "matched_query": "LLM evaluation language:python stars:>50",
+      "language": "Python"
+    },
+    {
+      "name": "evals",
+      "full_name": "openai/evals",
+      "url": "https://github.com/openai/evals",
+      "description": "Evals is a framework for evaluating LLMs and LLM systems, and an open-source registry of benchmarks.",
+      "stars": 18612,
+      "pushed_at": "2026-04-14T15:29:57Z",
+      "source": "github_search",
+      "matched_query": "LLM evaluation language:python stars:>50",
+      "language": "Python"
+    },
+    {
+      "name": "RagaAI-Catalyst",
+      "full_name": "raga-ai-hub/RagaAI-Catalyst",
+      "url": "https://github.com/raga-ai-hub/RagaAI-Catalyst",
+      "description": "Python SDK for Agent AI Observability, Monitoring and Evaluation Framework. Includes features like agent, llm and tools tracing, debugging multi-agentic system, self-hosted dashboard and advanced analytics with timeline and execution graph view ",
+      "stars": 16171,
+      "pushed_at": "2026-02-11T14:43:33Z",
+      "source": "github_search",
+      "matched_query": "LLM evaluation language:python stars:>50",
+      "language": "Python"
+    },
+    {
+      "name": "WeKnora",
+      "full_name": "Tencent/WeKnora",
+      "url": "https://github.com/Tencent/WeKnora",
+      "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+      "stars": 16005,
+      "pushed_at": "2026-06-05T07:12:25Z",
+      "source": "github_search",
+      "matched_query": "RAG evaluation stars:>50",
+      "language": "Go"
+    },
+    {
+      "name": "ragas",
+      "full_name": "vibrantlabsai/ragas",
+      "url": "https://github.com/vibrantlabsai/ragas",
+      "description": "Supercharge Your LLM Application Evaluations 🚀",
+      "stars": 14243,
+      "pushed_at": "2026-02-24T07:47:19Z",
+      "source": "github_search",
+      "matched_query": "LLM evaluation language:python stars:>50",
+      "language": "Python"
+    }
+  ],
+  "dedup": {
+    "skipped_tools": 0
+  }
+}
